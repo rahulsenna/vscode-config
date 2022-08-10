@@ -1,0 +1,369 @@
+{
+    "editor.tokenColorCustomizations": {
+        "textMateRules":
+        [
+            {
+                "scope": "variable.other.enummember",
+                "settings": {
+                    "fontStyle": "italic"
+                }
+            },
+            {
+                "scope": "storage.type.function",
+                "settings": {
+                    "fontStyle": "bold italic",
+                }
+            },
+            {
+                "scope": "storage.modifier",
+                "settings": {
+                    "fontStyle": "italic bold"
+                }
+            },
+            {
+                "scope": "keyword.operator.new",
+                "settings": {
+                    "fontStyle": "italic"
+                }
+            },
+            {
+                "scope": "storage.type.function",
+                "settings": {
+                    "fontStyle": "bold italic"
+
+                }
+            },
+
+        ],
+
+        "[Default Dark+]": {
+
+            "comments": "#707070",
+            "strings": "#cd9069",
+            "numbers": "#6897BB",
+            "textMateRules": [
+                {
+                    "scope": "keyword.control.directive",
+                    "settings": {
+                        "foreground": "#9b9b9b",
+                    }
+                },
+
+                {
+                    "scope": "variable.other.property",
+                    "settings": {
+                        "foreground": "#DADADA",
+                    }
+                },
+                {
+                    "scope": "keyword.control",
+                    "settings": {
+                        "foreground": "#569CD6",
+                    }
+                },
+            ],
+
+        },
+
+        "[Gruvbox Dark Hard]": {
+            "textMateRules": [
+                {
+                    "scope": "support.type",
+                    "settings": {
+                        "foreground": "#b8bb26",
+                    }
+                },
+                {
+                    "scope": "keyword.operator.new",
+                    "settings": {
+                        "foreground": "#FB4934",
+                    }
+                },
+                {
+                    "scope": "storage.type.function",
+                    "settings": {
+                        "foreground": "#FB4934",
+
+                    }
+                },
+                {
+                    "scope": "constant.numeric",
+                    "settings": {
+                        "foreground": "#ebdbb2",
+                    }
+                }
+                
+            ],
+
+        }
+    },
+    "editor.inlayHints.enabled": "on",
+    "editor.inlayHints.fontSize": 13.5,
+    // "editor.hideCursorInOverviewRuler": true,
+    "editor.cursorStyle": "block",
+
+    "workbench.colorCustomizations": {
+ 
+
+        "[Default Dark+]": {
+        // "editorCursor.foreground": "#629655",
+        "editorCursor.foreground": "#00ff00",
+        "editorCursor.background": "#000000",
+        "menu.background": "#0B0c0f",
+        "sideBar.background": "#0B0c0f",
+        "titleBar.activeBackground": "#0B0c0f",
+        "editor.background": "#0B0c0f",
+        "editorIndentGuide.background": "#0B0c0f",
+        "editorWhitespace.foreground": "#0B0c0f",
+        "editorGroupHeader.tabsBackground": "#0B0c0f",
+        "tab.inactiveBackground": "#0B0c0f",
+        "tab.activeBackground": "#0B0c0f",
+        "tab.activeBorder": "#488fec",
+        "tab.border": "#010f10",
+        "activityBar.activeBackground": "#0B0c0f",
+        "activityBar.border": "#0B0c0f",
+        "activityBar.background": "#0B0c0f",
+
+        "editorInlayHint.foreground": "#707070",
+        "editorInlayHint.background": "#000000", 
+
+        },
+        "[Gruvbox Dark Hard]": {
+            "editorInlayHint.foreground": "#928374",
+            "editorInlayHint.background": "#1D2021",  
+
+        }
+    },
+    "editor.semanticTokenColorCustomizations": {
+        "[Default Dark+]": {
+
+            "rules": {
+                "variable": "#94dbfd",
+                "property": "#DADADA",
+
+                "macro": "#beb7ff",
+                "variable.readonly": "#beb7ff",
+                "builtinConstant": {"foreground":"#beb7ff", "fontStyle": "italic"},
+
+                "method": "#dbdbaa",
+                "function": "#dbdbaa",
+                "function.builtin": {"fontStyle": "italic bold"},
+                "magicFunction": {"foreground": "#af5070", "fontStyle": "bold italic"},
+
+                "module": "#f9ae58",
+                "namespace":{"foreground":"#dbdbaa", "fontStyle":"italic"} ,                
+                "class": "#4eaab0",
+                "class.builtin": {"fontStyle": "italic"},
+                "type": "#4ec9b0",
+                "interface": {"foreground":"#4eaab0", "fontStyle": "italic"},
+
+                "enum": "#4eaacf",
+                "enumMember": {"foreground": "#DADADA", "fontStyle": "italic"},
+                "operator": "#C586C0",
+                
+                "parameter": "#C586C0",
+                "selfParameter": {"foreground":"#C586C0", "fontStyle": "italic bold"},
+            },  
+        },
+        "[Gruvbox Dark Hard]": {
+            "rules": {
+                // "variable": "#83a598",
+                "variable": "#8ec07c",
+                // "variable": "#458588",
+                "property": "#ebdbb2",
+
+                "macro": "#ae7cc0",
+                "variable.readonly": "#ae7cc0",
+                "builtinConstant": {"foreground":"#ae7cc0", "fontStyle": "italic"},
+                // "function": "#fe8019",
+                // "method": "#d08019",
+                "method": "#d79921",
+                "function": "#fabd2f",
+                "function.builtin": {"fontStyle": "italic bold"},
+                "magicFunction": {"foreground": "#2161d7", "fontStyle": "bold italic"},
+
+
+                "module": "#fe8019",
+                "namespace":{"foreground":"#fe8019"} ,
+                "class": "#b8CC26",
+                "class.builtin": {"fontStyle": "italic"},
+                "type": "#b8bb26",
+                "interface": {"foreground":"#98BD1a", "fontStyle": "italic"},
+                
+                "enum": "#f8f8f2",
+                "enumMember": {"foreground": "#ebdbb2", "fontStyle": "italic"},
+                "operator": "#b16286",
+
+                "parameter": "#d3869b",
+                "selfParameter": {"foreground":"#d3869b","fontStyle": "italic bold"},
+            },
+        },
+    },
+    
+
+    "editor.semanticHighlighting.enabled": true,
+    //         ClangD
+    "clangd.path": "clangd",
+    // "clangd.semanticHighlighting": true,
+    "clangd.restartAfterCrash": true,
+    "clangd.checkUpdates": true,
+    // "clangd.fallbackFlags": [],
+    // "clangd.trace": "",
+    "clangd.onConfigChanged": "restart",
+    // "clangd.serverCompletionRanking": true,
+    "clangd.arguments": [
+        "--header-insertion-decorators=0",
+        "--background-index",
+        "--clang-tidy",
+        "--compile-commands-dir=${workspaceFolder}/build",
+    ],
+    "cmake.configureOnOpen": true,
+    "cmake.generator": "Ninja",
+    "cmake.cmakePath": "cmake",
+    "[cpp]": {
+        "editor.lineNumbers": "off",
+        "editor.defaultFormatter": "llvm-vs-code-extensions.vscode-clangd",
+    },
+    "editor.minimap.enabled": false,
+    "extensions.ignoreRecommendations": true,
+    "editor.fontFamily": "JetBrains Mono",
+    "editor.fontLigatures": true,
+    "editor.fontSize": 16,
+    "editor.lineHeight": 16,
+    "workbench.editor.tabSizing": "fit",
+    "editor.lineNumbers": "on",
+
+    "git.decorations.enabled": true,
+    "editor.glyphMargin": true,
+    "editor.folding": true,
+    "editor.renderControlCharacters": true,
+    "editor.smoothScrolling": true,
+    // "editor.cursorSmoothCaretAnimation": true,
+    // terminal font size
+    "terminal.integrated.fontSize": 15,
+
+    "explorer.confirmDelete": false,
+    
+    "C_Cpp.clang_format_path": "clang-format",
+    "C_Cpp.enhancedColorization": "Enabled",
+    "C_Cpp.experimentalFeatures": "Enabled",
+    "C_Cpp.default.compileCommands": "${workspaceFolder}/build",
+    "C_Cpp.intelliSenseEngine": "Disabled",
+
+    "C_Cpp.autocompleteAddParentheses": true,
+    "C_Cpp.configurationWarnings": "Enabled",
+    "C_Cpp.errorSquiggles": "Enabled",
+
+    "debug.onTaskErrors": "debugAnyway",
+    "terminal.integrated.tabs.enabled": true,
+    "workbench.editorAssociations": {
+        // "*.ipynb": "jupyter.notebook.ipynb"
+    },
+    "python.defaultInterpreterPath": "C:\\Python39\\python.exe",
+    "editor.inlineSuggest.enabled": true,
+    "github.copilot.enable": {
+        "*": true,
+        "yaml": false,
+        "plaintext": true,
+        "markdown": true,
+        "jsonc": true,
+        "cpp": true
+    },
+    "editor.guides.bracketPairs": "active",
+    "editor.bracketPairColorization.enabled": true,
+    "redhat.telemetry.enabled": false,
+    
+    "surround.showOnlyUserDefinedSnippets": true,
+    "surround.custom": {
+        // command name must be unique
+        "if": {
+            "label": "if",
+            "description": "if Custom",
+            "disabled": false,
+            "snippet": "if(${1:condition}) \n{\n\t$TM_SELECTED_TEXT\n}$0",
+            "languageIds": ["c","cpp"]
+        },
+        "ifelse": {
+            "label": "if else",
+            "description": "if else Custom",
+            "disabled": false,
+            "snippet": "if(${1:condition}) \n{\n\t$TM_SELECTED_TEXT\n}else\n{}$0",
+            "languageIds": ["c","cpp"]
+        },
+        "#if0": {
+            "label": "#if0",
+            "description": "#if 0",
+            "disabled": false,
+            "snippet": "#if 0 \n\t$TM_SELECTED_TEXT\n#endif$0",
+            "languageIds": ["c","cpp"]        },
+        "#if0Else": {
+            "label": "#if0 Else",
+            "description": "#if 0 Else",
+            "disabled": false,
+            "snippet": "#if 0 \n\t$TM_SELECTED_TEXT\n#else\n#endif$0",
+            "languageIds": ["c","cpp"]        },
+        "for": {
+            "label": "for",
+            "description": "for (u32 $i = 0; $i < $n; $i++) Custom",
+            "disabled": false,
+            "snippet": "for(u32 ${1:I} = 0; ${1:I} < ${2:n}; ${1:I}++) \n{\n\t$TM_SELECTED_TEXT\n}",
+            "languageIds": ["c","cpp"]},
+        // You can add more ...
+    },
+    "editor.quickSuggestionsDelay": 3000,
+    "javascript.suggest.completeFunctionCalls": true,
+    "emmet.triggerExpansionOnTab": true,
+    "editor.suggestOnTriggerCharacters": false,
+    "problems.sortOrder": "severity",
+    "postfixer.fallback_command": "rahulvscodeplugin.tab",
+    "window.zoomLevel": 1,
+    "window.menuBarVisibility": "toggle",
+    "problems.defaultViewMode": "table",
+
+/*     "launch": {
+        // Default Debuggers
+        "version": "0.2.0",
+        "configurations": [
+            {
+                "type": "node",
+                "request": "launch",
+                "name": "Node: JavaScript/TypeScript",
+                "program": "${file}",
+                "cwd": "${workspaceRoot}",
+                "runtimeExecutable": "node"
+            },
+            {
+                "name": "C/C++: GDB",
+                "type": "cppdbg",
+                "request": "launch",
+                "program": "${workspaceFolder}/bin/${fileBasenameNoExtension}",
+                "args": [],
+                "stopAtEntry": false,
+                "cwd": "${workspaceFolder}/bin/",
+                "environment": [],
+                "externalConsole": false,
+                "MIMode": "gdb",
+                "setupCommands": [
+                    {
+                        "description": "Enable pretty-printing for gdb",
+                        "text": "-enable-pretty-printing",
+                        "ignoreFailures": true
+                    },
+                    {
+                        "description": "Set Disassembly Flavor to Intel",
+                        "text": "-gdb-set disassembly-flavor intel",
+                        "ignoreFailures": true
+                    }
+                ],
+                "preLaunchTask": "C/C++: Build and Run:GCC"
+            }
+        ]
+    }, */
+    // "javascript.inlayHints.functionLikeReturnTypes.enabled": true,
+    // "javascript.inlayHints.parameterNames.enabled": "all",
+    // "javascript.inlayHints.propertyDeclarationTypes.enabled": true,
+    // "javascript.inlayHints.variableTypes.enabled": true,
+    // "gulp.autoDetect": "on",
+
+    
+}
