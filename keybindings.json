@@ -1,10 +1,6 @@
 // Place your key bindings in this file to override the defaultsauto[]
 [
     {
-        "key": "f5",
-        "command": "sftp.download.activeFile"
-    },
-    {
         "key": "ctrl+j",
         "command": "editor.action.jumpToBracket",
         "when": "editorTextFocus"
@@ -106,16 +102,8 @@
         "key": "`",
         "command": "workbench.action.toggleSidebarVisibility"
     },
-    {
-        "key": "f3",
-        "command": "editor.action.moveSelectionToNextFindMatch",
-        "when": "editorFocus"
-    },
-    {
-        "key": "f3",
-        "command": "-editor.action.nextMatchFindAction",
-        "when": "editorFocus"
-    },
+
+
     // {
     //     "key": "shift shift shift shift",
     //     "command": "workbench.action.gotoSymbol"
@@ -257,9 +245,25 @@
     },
     {
         "key": "a u",
+        "command": "wrap-unwrap.unwrap",
+        "when": "editorTextFocus && modal.normal"
+    },
+    {
+        "key": "a b",
         "command": "bracketeer.removeBrackets",
         "when": "editorTextFocus && modal.normal"
     },
+    {
+        "key": "a e",
+        "command": "editor.action.showHover",
+        "when": "editorTextFocus && modal.normal"
+    },
+    {
+        "key": "a r",
+        "command": "rahulvscodeplugin.replace",
+        "when": "editorTextFocus && modal.normal"
+    },
+
     {
         "key": "ctrl+shift+enter",
         "command": "editor.action.insertSnippet",
@@ -307,15 +311,16 @@
         "command": "workbench.action.debug.start",
         "when": "!inDebugMode && !inCMakeProject"
     },
-    {
-        "key": "ctrl+f5",
-        "command": "-workbench.action.debug.run",
-        "when": "debuggersAvailable && debugState != 'initializing'"
-    },
+
     {
         "key": "f8",
         "command": "workbench.action.debug.start",
         "when": "debuggersAvailable && debugState != 'initializing' && !inCMakeProject"
+    },
+    {
+        "key": "ctrl+f5",
+        "command": "-workbench.action.debug.run",
+        "when": "debuggersAvailable && debugState != 'initializing'"
     },
     // Build F4
     {
@@ -328,6 +333,12 @@
         "command": "workbench.action.tasks.runTask",
         "args": "C/C++:Build",
         "when": "editorLangId == c || editorLangId == cpp && !inCMakeProject"
+    },
+    {
+        "key": "f4",
+        "command": "workbench.action.tasks.runTask",
+        "args": "build",
+        "when": "editorLangId == asm-collection"
     },
     {
         "key": "f4",
@@ -377,9 +388,9 @@
         "when": "debuggersAvailable && editorTextFocus"
     }, 
     {
-        "key": "f7",
+        "key": "f5",
         "command": "editor.debug.action.toggleBreakpoint",
-        "when": "debuggersAvailable && editorTextFocus && inDebugMode && debugState != 'initializing'"
+        "when": "debuggersAvailable && editorTextFocus"
     },
     {
         "key": "f8",
@@ -433,11 +444,28 @@
         "args": {"snippet": "`"},
         "when": "editorFocus"
     },
+
     {
-        "key": "a f3",
-        "command": "editor.action.showHover",
-        "when": "editorTextFocus"
+        "key": "[",
+        "command": "undo",
+        "when": "editorTextFocus && modal.normal"
     },
+    {
+        "key": "]",
+        "command": "redo",
+        "when": "editorTextFocus && modal.normal"
+    },
+    {
+        "key": "i",
+        "command": "selectPrevSuggestion",
+        "when": "suggestWidgetMultipleSuggestions && suggestWidgetVisible && textInputFocus"
+    },
+    {
+        "key": "k",
+        "command": "selectNextSuggestion",
+        "when": "suggestWidgetMultipleSuggestions && suggestWidgetVisible && textInputFocus"
+    },
+
 
 /* 
     {

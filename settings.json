@@ -262,12 +262,13 @@
     "python.defaultInterpreterPath": "C:\\Python39\\python.exe",
     "editor.inlineSuggest.enabled": true,
     "github.copilot.enable": {
-        "*": true,
+        "*": false,
         "yaml": false,
         "plaintext": true,
         "markdown": true,
         "jsonc": true,
-        "cpp": true
+        "cpp": true,
+        "javascript": false
     },
     "editor.guides.bracketPairs": "active",
     "editor.bracketPairColorization.enabled": true,
@@ -319,51 +320,11 @@
     "window.zoomLevel": 1,
     "window.menuBarVisibility": "toggle",
     "problems.defaultViewMode": "table",
+    "workbench.colorTheme": "Gruvbox Dark Hard",
 
-/*     "launch": {
-        // Default Debuggers
-        "version": "0.2.0",
-        "configurations": [
-            {
-                "type": "node",
-                "request": "launch",
-                "name": "Node: JavaScript/TypeScript",
-                "program": "${file}",
-                "cwd": "${workspaceRoot}",
-                "runtimeExecutable": "node"
-            },
-            {
-                "name": "C/C++: GDB",
-                "type": "cppdbg",
-                "request": "launch",
-                "program": "${workspaceFolder}/bin/${fileBasenameNoExtension}",
-                "args": [],
-                "stopAtEntry": false,
-                "cwd": "${workspaceFolder}/bin/",
-                "environment": [],
-                "externalConsole": false,
-                "MIMode": "gdb",
-                "setupCommands": [
-                    {
-                        "description": "Enable pretty-printing for gdb",
-                        "text": "-enable-pretty-printing",
-                        "ignoreFailures": true
-                    },
-                    {
-                        "description": "Set Disassembly Flavor to Intel",
-                        "text": "-gdb-set disassembly-flavor intel",
-                        "ignoreFailures": true
-                    }
-                ],
-                "preLaunchTask": "C/C++: Build and Run:GCC"
-            }
-        ]
-    }, */
-    // "javascript.inlayHints.functionLikeReturnTypes.enabled": true,
-    // "javascript.inlayHints.parameterNames.enabled": "all",
-    // "javascript.inlayHints.propertyDeclarationTypes.enabled": true,
-    // "javascript.inlayHints.variableTypes.enabled": true,
-    // "gulp.autoDetect": "on",
+    "debug.allowBreakpointsEverywhere": true,
+    "asm-code-lens.donated": true,
+    "workbench.activityBar.visible": false
 
     
 }
