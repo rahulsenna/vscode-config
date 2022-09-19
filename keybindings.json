@@ -1,9 +1,9 @@
 // Place your key bindings in this file to override the defaultsauto[]
 [
     {
-        "key": "ctrl+j",
+        "key": "a j",
         "command": "editor.action.jumpToBracket",
-        "when": "editorTextFocus"
+        "when": "editorTextFocus && modal.normal"
     },
     {
         "key": "ctrl+j",
@@ -11,8 +11,9 @@
         "when": "editorTextFocus"
     },
     {
-        "key": "ctrl+shift+j",
-        "command": "editor.action.selectToBracket"
+        "key": "a j",
+        "command": "editor.action.selectToBracket",
+        "when": "editorTextFocus && modal.normal && modal.visual"
     },
     {
         "key": "ctrl+shift+j",
@@ -243,13 +244,13 @@
         "command": "surround.with",
         "when": "editorTextFocus && modal.normal"
     },
-    {
+ /*    {
         "key": "a u",
         "command": "wrap-unwrap.unwrap",
         "when": "editorTextFocus && modal.normal"
-    },
+    }, */
     {
-        "key": "a b",
+        "key": "a u",
         "command": "bracketeer.removeBrackets",
         "when": "editorTextFocus && modal.normal"
     },
@@ -343,6 +344,11 @@
     {
         "key": "f4",
         "command": "python.execInTerminal-icon",
+        "when": "editorLangId == python"
+    },
+    {
+        "key": "f8",
+        "command": "python.debugInTerminal",
         "when": "editorLangId == python"
     },
     {
@@ -480,4 +486,12 @@
         "args": {"snippet": "->"},
         "when": "editorFocus"
     }, */
+
+
+
+
+
+
+
+    
 ]
