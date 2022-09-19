@@ -268,7 +268,7 @@
         "key": "ctrl+shift+enter",
         "command": "editor.action.insertSnippet",
         "args": {
-            "snippet": "\n{\n\t${1:code}\n}"
+            "snippet": "\n{\n\t${1:}\n}"
         },
         "when": "editorTextFocus"
     },

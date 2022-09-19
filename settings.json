@@ -177,7 +177,8 @@
                 "builtinConstant": {"foreground":"#ae7cc0", "fontStyle": "italic"},
                 // "function": "#fe8019",
                 // "method": "#d08019",
-                "method": "#d79921",
+                // "method": "#d79921",
+                "method": "#fad02f",
                 "function": "#fabd2f",
                 "function.builtin": {"fontStyle": "italic bold"},
                 "magicFunction": {"foreground": "#2161d7", "fontStyle": "bold italic"},
@@ -317,14 +318,14 @@
     "editor.suggestOnTriggerCharacters": false,
     "problems.sortOrder": "severity",
     "postfixer.fallback_command": "rahulvscodeplugin.tab",
-    "window.zoomLevel": 1,
     "window.menuBarVisibility": "toggle",
     "problems.defaultViewMode": "table",
-    "workbench.colorTheme": "Gruvbox Dark Hard",
 
     "debug.allowBreakpointsEverywhere": true,
     "asm-code-lens.donated": true,
-    "workbench.activityBar.visible": false
+    "debug.disassemblyView.showSourceCode": false,
+    "workbench.colorTheme": "Gruvbox Dark Hard",
+    "window.zoomLevel": 1
 
     
 }
