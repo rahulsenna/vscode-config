@@ -1,33 +1,44 @@
 // Place your key bindings in this file to override the defaultsauto[]
 [
     {
-        "key": "a h",
-        "command": "editor.action.smartSelect.shrink",
-        "when": "editorTextFocus"
+        "key": "a z",
+        "command": "redo",
+        "when": "editorTextFocus && !editorReadonly && modal.normal"
+    },
+    {
+        "key": "z",
+        "command": "undo",
+        "when": "editorTextFocus && !editorReadonly && modal.normal"
     },
     {
         "key": "a l",
+        "command": "editor.action.smartSelect.shrink",
+        "when": "editorTextFocus && modal.normal"
+    },
+    {
+        "key": "a j",
         "command": "editor.action.smartSelect.expand",
         "when": "editorTextFocus  && modal.normal"
     },
     {
-        "key": "a j",
-        "command": "editor.action.jumpToBracket",
+        "key": "[",
+        "command": "jump-backwards",
         "when": "editorTextFocus && modal.normal"
     },
     {
-        "key": "ctrl+j",
+        "key": "]",
+        "command": "jump-forward",
+        "when": "editorTextFocus && modal.normal"
+    },
+    {
+        "key": "a i",
         "command": "editor.action.jumpToBracket",
-        "when": "editorTextFocus"
+        "when": "editorTextFocus && modal.normal"
     },
     {
         "key": "a k",
         "command": "editor.action.selectToBracket",
         "when": "editorTextFocus && modal.normal"
-    },
-    {
-        "key": "ctrl+shift+j",
-        "command": "editor.action.selectToBracket"
     },
     {
         "key": "ctrl+alt+shift+up", // whatever keybinding you want
@@ -460,17 +471,6 @@
         "args": {"snippet": "`"},
         "when": "editorFocus"
     },
-
-    {
-        "key": "[",
-        "command": "undo",
-        "when": "editorTextFocus && modal.normal"
-    },
-    {
-        "key": "]",
-        "command": "redo",
-        "when": "editorTextFocus && modal.normal"
-    },
     {
         "key": "i",
         "command": "selectPrevSuggestion",
@@ -491,6 +491,7 @@
         "command": "-editor.action.smartSelect.shrink",
         "when": "editorTextFocus"
     },
+
 
 
 /* 
