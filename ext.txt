@@ -1,3 +1,4 @@
+code --install-extension ArturoDent.jump-and-select
 code --install-extension bbenoist.shell
 code --install-extension cschlosser.doxdocgen
 code --install-extension eamodio.gitlens
@@ -9,6 +10,7 @@ code --install-extension jdinhlife.gruvbox
 code --install-extension jeff-hykin.better-cpp-syntax
 code --install-extension josetr.cmake-language-support-vscode
 code --install-extension kevinglasson.cornflakes-linter
+code --install-extension krnik.vscode-jumpy
 code --install-extension llvm-vs-code-extensions.vscode-clangd
 code --install-extension maziac.asm-code-lens
 code --install-extension ms-dotnettools.vscode-dotnet-runtime
@@ -33,7 +35,6 @@ code --install-extension Natizyskunk.sftp
 code --install-extension pustelto.bracketeer
 code --install-extension rahulsinha.hippie-completion
 code --install-extension rahulsinha.postfixer
-code --install-extension rahulsinha.wrap-unwrap
 code --install-extension redhat.vscode-yaml
 code --install-extension slevesque.shader
 code --install-extension StAlYo.jump-brackets
