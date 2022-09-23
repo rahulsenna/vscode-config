@@ -1,5 +1,89 @@
 // Place your key bindings in this file to override the defaultsauto[]
 [
+    //--------------insert modes  --------------
+    {
+        "key": ".",
+        "command": "rahulvscodeplugin.command_and_insert",
+        "args": "editor.action.insertLineAfter",
+        "when": "editorTextFocus && modal.normal"    
+    },
+    {
+        "key": "shift+.",
+        "command": "rahulvscodeplugin.command_and_insert",
+        "args": "editor.action.insertLineBefore",
+        "when": "editorTextFocus && modal.normal"    
+    },
+/*     {
+        "key": ". i",
+        "command": "rahulvscodeplugin.command_and_insert",
+        "args": "editor.action.insertLineAfter",
+        "when": "editorTextFocus && modal.normal"    
+    },
+    {
+        "key": ". k",
+        "command": "rahulvscodeplugin.command_and_insert",
+        "args": "editor.action.insertLineBefore",
+        "when": "editorTextFocus && modal.normal"
+    },
+    {
+        "key": ". j",
+        "command": "rahulvscodeplugin.command_and_insert",
+        "args": "cursorLeft",
+        "when": "editorTextFocus && modal.normal"
+    },
+
+    {
+        "key": ". u",
+        "command": "rahulvscodeplugin.command_and_insert",
+        "args": "cursorHome",
+        "when": "editorTextFocus && modal.normal"
+    },
+
+    {
+        "key": ". o",
+        "command": "rahulvscodeplugin.command_and_insert",
+        "args": "cursorEnd",
+        "when": "editorTextFocus && modal.normal"
+    },
+
+
+    {
+        "key": ". l",
+        "command": "rahulvscodeplugin.command_and_insert",
+        "args": "cursorRight",
+        "when": "editorTextFocus && modal.normal"
+    },
+
+    {
+        "key": ". s",
+        "command": "rahulvscodeplugin.command_and_insert",
+        "args": "cursorWordPartRight",
+        "when": "editorTextFocus && modal.normal"
+    },
+
+    {
+        "key": ". a",
+        "command": "rahulvscodeplugin.command_and_insert",
+        "args": "cursorWordPartLeft",
+        "when": "editorTextFocus && modal.normal"
+    },
+
+    {
+        "key": ". f",
+        "command": "rahulvscodeplugin.command_and_insert",
+        "args": "cursorWordRight",
+        "when": "editorTextFocus && modal.normal"
+    }, 
+
+    {
+        "key": ". d",
+        "command": "rahulvscodeplugin.command_and_insert",
+        "args": "cursorWordLeft",
+        "when": "editorTextFocus && modal.normal"
+    },
+*/
+
+    //-----------------------
     {
         "key": "a z",
         "command": "redo",
@@ -12,12 +96,30 @@
     },
     {
         "key": "a l",
+        "command": "editor.action.smartSelect.expand",
+        "when": "editorTextFocus && modal.normal"
+    },
+    {
+        "key": "a ;",
         "command": "editor.action.smartSelect.shrink",
         "when": "editorTextFocus && modal.normal"
     },
     {
+        "key": "/",
+        "command": "rahulvscodeplugin.command_and_insert",
+        "args": "jump-and-select.jumpForward",
+        // "args": "extension.jumpy-enter",
+        "when": "editorTextFocus  && modal.normal"
+    },
+    {
+        "key": "shift+/",
+        "command": "rahulvscodeplugin.command_and_insert",
+        "args": "jump-and-select.jumpBackward",
+        "when": "editorTextFocus  && modal.normal"
+    },
+    {
         "key": "a j",
-        "command": "editor.action.smartSelect.expand",
+        "command": "jump-and-select.redo",
         "when": "editorTextFocus  && modal.normal"
     },
     {
@@ -265,14 +367,9 @@
         "command": "surround.with",
         "when": "editorTextFocus && modal.normal"
     },
- /*    {
-        "key": "a u",
-        "command": "wrap-unwrap.unwrap",
-        "when": "editorTextFocus && modal.normal"
-    }, */
     {
         "key": "a u",
-        "command": "bracketeer.removeBrackets",
+        "command": "rahulvscodeplugin.unwrap",
         "when": "editorTextFocus && modal.normal"
     },
     {
@@ -491,8 +588,22 @@
         "command": "-editor.action.smartSelect.shrink",
         "when": "editorTextFocus"
     },
+    {
+        "key": "ctrl+l",
+        "command": "-expandLineSelection",
+        "when": "textInputFocus"
+    },
 
-
+    {
+        "key": "ctrl+l",
+        "command": "cursorRight",
+        "when": "textInputFocus"
+    },
+    {
+        "key": "ctrl+j",
+        "command": "cursorLeft",
+        "when": "textInputFocus"
+    },
 
 /* 
     {
@@ -501,12 +612,7 @@
         "args": {"snippet": "."},
         "when": "editorFocus"
     },
-    {
-        "key": ". .",
-        "command": "editor.action.insertSnippet",
-        "args": {"snippet": "->"},
-        "when": "editorFocus"
-    }, */
+ */
 
 
 
