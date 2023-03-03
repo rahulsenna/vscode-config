@@ -210,7 +210,7 @@
 
     "editor.semanticHighlighting.enabled": true,
     //         ClangD
-    "clangd.path": "clangd",
+    "clangd.path": "/home/agent/.config/Code/User/globalStorage/llvm-vs-code-extensions.vscode-clangd/install/15.0.6/clangd_15.0.6/bin/clangd",
     // "clangd.semanticHighlighting": true,
     "clangd.restartAfterCrash": true,
     "clangd.checkUpdates": true,
@@ -228,7 +228,7 @@
     "cmake.generator": "Ninja",
     "cmake.cmakePath": "cmake",
     "[cpp]": {
-        "editor.lineNumbers": "off",
+        "editor.lineNumbers": "on",
         "editor.defaultFormatter": "llvm-vs-code-extensions.vscode-clangd",
     },
     "editor.minimap.enabled": false,
@@ -266,7 +266,7 @@
     "workbench.editorAssociations": {
         // "*.ipynb": "jupyter.notebook.ipynb"
     },
-    "python.defaultInterpreterPath": "C:\\Python39\\python.exe",
+    "python.defaultInterpreterPath": "/home/agent/werk/AntiPIracy/proc/.venv",
     "editor.inlineSuggest.enabled": true,
     "github.copilot.enable": {
         "*": true,
@@ -330,17 +330,61 @@
     "debug.allowBreakpointsEverywhere": true,
     "asm-code-lens.donated": true,
     "debug.disassemblyView.showSourceCode": false,
-    "window.zoomLevel": 1,
 
     "jumpy.wordRegexp": "[a-zA-Z0-9_]{1,}",
     "jumpy.primaryCharset": "jkliuo;h",
     "jumpy.display.backgroundColor": "#00000088",
     "jumpy.display.color": "#0af0c1",
     "search.mode": "newEditor",
-    "workbench.activityBar.visible": false,
  
     // "jumpy.display.color": "#ff0000"
-    
+    "minify.js": {
+        "mangle": true,
+        "compress": {
+            "sequences": true,
+            "properties": true,
+            "dead_code": true,
+            "drop_debugger": true,
+            "unsafe": false,
+            "unsafe_comps": false,
+            "conditionals": true,
+            "comparisons": true,
+            "evaluate": true,
+            "booleans": true,
+            "loops": true,
+            "unused": true,
+            "hoist_funs": true,
+            "keep_fargs": true,
+            "keep_fnames": false,
+            "hoist_vars": true,
+            "if_return": true,
+            "join_vars": true,
+            "collapse_vars": true,
+            "reduce_vars": true,
+            "side_effects": true,
+            "pure_getters": false,
+            "pure_funcs": null,
+            "negate_iife": false,
+            "drop_console": true,
+            "passes": 1,
+            "global_defs": {}
+        },
+        "output": {
+            "ascii_only": false,
+            "inline_script": false,
+            "max_line_len": 32000,
+            "braces": false,
+            "semicolons": true,
+            "comments": false,
+            "shebang": true,
+            "preamble": null,
+            "quote_style": "best"
+        }
+    },
+    "[python]": {
+        "editor.formatOnType": true
+    },
+    "window.zoomLevel": 1
 
     
 }

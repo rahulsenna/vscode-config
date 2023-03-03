@@ -399,6 +399,11 @@
         "when": "editorTextFocus && modal.insert && !editorHasSelection"
     },
     {
+        "key": "shift+tab",
+        "command": "hippie-completion.prev",
+        "when": "editorTextFocus && modal.insert && !editorHasSelection"
+    },
+    {
         "key": "shift+space",
         "command": "editor.action.triggerSuggest",
         "when": "editorHasCompletionItemProvider && textInputFocus && !editorReadonly"
@@ -558,6 +563,11 @@
     },
     {
         "key": "ctrl+/",
+        "command": "editor.action.commentLine",
+        "when": "editorTextFocus && !editorReadonly && editorHasSelection"
+    },
+    {
+        "key": "ctrl+shift+/",
         "command": "editor.action.blockComment",
         "when": "editorTextFocus && !editorReadonly && editorHasSelection"
     },
