@@ -5,15 +5,22 @@
         "key": ".",
         "command": "rahulvscodeplugin.command_and_insert",
         "args": "editor.action.insertLineAfter",
+        "when": "editorTextFocus && modal.normal" 
+    },
+    {
+        "key": "ctrl+.",
+        "command": "rahulvscodeplugin.command_and_insert",
+        "args": "editor.action.insertLineBefore",
         "when": "editorTextFocus && modal.normal"    
     },
+/*
     {
         "key": "shift+.",
         "command": "rahulvscodeplugin.command_and_insert",
         "args": "editor.action.insertLineBefore",
         "when": "editorTextFocus && modal.normal"    
     },
-/*     {
+     {
         "key": ". i",
         "command": "rahulvscodeplugin.command_and_insert",
         "args": "editor.action.insertLineAfter",
@@ -112,7 +119,7 @@
         "when": "editorTextFocus  && modal.normal"
     },
     {
-        "key": "shift+/",
+        "key": "a /",
         "command": "rahulvscodeplugin.command_and_insert",
         "args": "jump-and-select.jumpBackward",
         "when": "editorTextFocus  && modal.normal"
@@ -613,6 +620,26 @@
         "key": "ctrl+j",
         "command": "cursorLeft",
         "when": "textInputFocus"
+    },
+    {
+        "key": "ctrl+c",
+        "command": "workbench.action.terminal.copySelection",
+        "when": "terminalFocus && terminalHasBeenCreated && terminalTextSelected || terminalFocus && terminalProcessSupported && terminalTextSelected"
+    },
+    {
+        "key": "ctrl+shift+c",
+        "command": "-workbench.action.terminal.copySelection",
+        "when": "terminalFocus && terminalHasBeenCreated && terminalTextSelected || terminalFocus && terminalProcessSupported && terminalTextSelected"
+    },
+    {
+        "key": "ctrl+v",
+        "command": "workbench.action.terminal.paste",
+        "when": "terminalFocus && terminalHasBeenCreated || terminalFocus && terminalProcessSupported"
+    },
+    {
+        "key": "ctrl+shift+v",
+        "command": "-workbench.action.terminal.paste",
+        "when": "terminalFocus && terminalHasBeenCreated || terminalFocus && terminalProcessSupported"
     },
 
 /* 

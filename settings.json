@@ -273,9 +273,11 @@
         "yaml": false,
         "plaintext": true,
         "markdown": true,
+        "scminput": false,
         "jsonc": true,
         "cpp": true,
-        "javascript": true
+        "javascript": true,
+        "json": false
     },
     "editor.guides.bracketPairs": "active",
     "editor.bracketPairColorization.enabled": true,
@@ -384,7 +386,9 @@
     "[python]": {
         "editor.formatOnType": true
     },
-    "window.zoomLevel": 1
+    "window.zoomLevel": 1,
+    "debug.javascript.autoAttachFilter": "smart",
+    "glassit.alpha": 245
 
     
 }
