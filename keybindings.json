@@ -119,10 +119,23 @@
         "when": "editorTextFocus  && modal.normal"
     },
     {
+        "key": "/",
+        "command": "rahulvscodeplugin.command_and_insert",
+        "args": "jump-and-select.jumpForwardSelect",
+        // "args": "extension.jumpy-enter",
+        "when": "editorTextFocus && modal.normal && modal.visual"
+    },
+    {
         "key": "a /",
         "command": "rahulvscodeplugin.command_and_insert",
         "args": "jump-and-select.jumpBackward",
         "when": "editorTextFocus  && modal.normal"
+    },
+    {
+        "key": "a /",
+        "command": "rahulvscodeplugin.command_and_insert",
+        "args": "jump-and-select.jumpBackwardSelect",
+        "when": "editorTextFocus  && modal.normal && modal.visual"
     },
     {
         "key": "a j",
@@ -139,16 +152,39 @@
         "command": "jump-forward",
         "when": "editorTextFocus && modal.normal"
     },
+
     {
-        "key": "a i",
+        "key": "[",
+        "command": "jump-backwards-selection",
+        "when": "editorTextFocus && modal.normal && modal.visual"
+    },
+    {
+        "key": "]",
+        "command": "jump-forward-selection",
+        "when": "editorTextFocus && modal.normal && modal.visual"
+    },
+
+    // {
+    //     "key": "a i",
+    //     "command": "editor.action.jumpToBracket",
+    //     "when": "editorTextFocus && modal.normal"
+    // },
+    // {
+    //     "key": "a k",
+    //     "command": "editor.action.selectToBracket",
+    //     "when": "editorTextFocus && modal.normal"
+    // },
+    {
+        "key": "a [",
         "command": "editor.action.jumpToBracket",
         "when": "editorTextFocus && modal.normal"
     },
     {
-        "key": "a k",
+        "key": "a ]",
         "command": "editor.action.selectToBracket",
         "when": "editorTextFocus && modal.normal"
     },
+    
     {
         "key": "ctrl+alt+shift+up", // whatever keybinding you want
         "command": "cursorMove",
@@ -323,16 +359,7 @@
         "key": "f1",
         "command": "-workbench.action.showCommands"
     },
-    {
-        "key": "f8",
-        "command": "-editor.action.marker.nextInFiles",
-        "when": "editorFocus"
-    },
-    {
-        "key": "shift+f8",
-        "command": "-editor.action.marker.prevInFiles",
-        "when": "editorFocus"
-    },
+    
     {
         "key": "f2",
         "command": "editor.action.marker.nextInFiles",
@@ -434,20 +461,65 @@
 
     {
         "key": "f7",
-        "command": "workbench.action.debug.run",
-        "when": "!inDebugMode && !inCMakeProject"
+        "command": "-cmake.build",
+        "when": "cmake:enableFullFeatureSet && !cmake:hideBuildCommand"
     },
     {
+        "key": "f7",
+        "command": "cmake.launchTarget",
+        "when": "cmake:enableFullFeatureSet && !cmake:hideDebugCommand && !inDebugMode"
+    },
+    {
+        "key": "f7",
+        "command": "python.execInTerminal-icon",
+        "when": "editorLangId == python"
+    },
+
+    {
+        "key": "f7",
+        "command": "workbench.action.debug.run",
+        "when": "editorLangId != python && !inDebugMode && !cmake:enableFullFeatureSet"
+    },
+
+    {
         "key": "f8",
-        "command": "workbench.action.debug.start",
-        "when": "!inDebugMode && !inCMakeProject"
+        "command": "-editor.action.marker.nextInFiles",
+        "when": "editorFocus"
+    },
+    {
+        "key": "shift+f8",
+        "command": "-editor.action.marker.prevInFiles",
+        "when": "editorFocus"
+    },
+
+
+    {
+        "key": "f8",
+        "command": "python.debugInTerminal",
+        "when": "editorLangId == python"
+    },
+
+    {
+        "key": "f8",
+        "command": "cmake.debugTarget",
+        "when": "cmake:enableFullFeatureSet && inCMakeProject && !cmake:hideDebugCommand && !inDebugMode"
     },
 
     {
         "key": "f8",
         "command": "workbench.action.debug.start",
-        "when": "debuggersAvailable && debugState != 'initializing' && !inCMakeProject"
+        // "when": "!inDebugMode && !inCMakeProject"
+        "when": "editorLangId != python && !inDebugMode && !cmake:enableFullFeatureSet"
+
     },
+
+    // {
+    //     "key": "f8",
+    //     "command": "workbench.action.debug.start",
+    //     "when": "debuggersAvailable && debugState != 'initializing' && !inCMakeProject"
+    // },
+
+
     {
         "key": "ctrl+f5",
         "command": "-workbench.action.debug.run",
@@ -459,12 +531,7 @@
         "command": "cmake.build",
         "when": "cmake:enableFullFeatureSet && !cmake:hideBuildCommand"
     },
-    {
-        "key": "f4",
-        "command": "workbench.action.tasks.runTask",
-        "args": "C/C++:Build",
-        "when": "editorLangId == c || editorLangId == cpp && !inCMakeProject"
-    },
+
     {
         "key": "f4",
         "command": "workbench.action.tasks.runTask",
@@ -476,11 +543,7 @@
         "command": "python.execInTerminal-icon",
         "when": "editorLangId == python"
     },
-    {
-        "key": "f8",
-        "command": "python.debugInTerminal",
-        "when": "editorLangId == python"
-    },
+    
     {
         "key": "f4",
         "command": "workbench.action.debug.start",
@@ -495,27 +558,23 @@
         "when": "editorLangId == typescript"
 
     },
+
     {
-        "key": "f7",
-        "command": "-cmake.build",
-        "when": "cmake:enableFullFeatureSet && !cmake:hideBuildCommand"
+        "key": "f4",
+        "command": "workbench.action.tasks.runTask",
+        "args": "C/C++: GCC Build",
+        // "when": "editorLangId == c || editorLangId == cpp && !inCMakeProject"
+        "when": "editorLangId != typescript && editorLangId != javascript && editorLangId != python && editorLangId != asm-collection && !cmake:enableFullFeatureSet"
+
     },
-    {
-        "key": "f7",
-        "command": "cmake.launchTarget",
-        "when": "cmake:enableFullFeatureSet && !cmake:hideDebugCommand && !inDebugMode"
-    },
+
+
     {
         "key": "shift+f5",
         "command": "-cmake.launchTarget",
         "when": "cmake:enableFullFeatureSet && !cmake:hideDebugCommand && !inDebugMode"
     },
-    {
-        "key": "f8",
-        "command": "cmake.debugTarget",
-        "when": "cmake:enableFullFeatureSet && inCMakeProject && !cmake:hideDebugCommand && !inDebugMode"
-    },
-
+    
     // Debug mode controls
    
     {

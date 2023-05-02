@@ -233,7 +233,7 @@
     },
     "editor.minimap.enabled": false,
     "extensions.ignoreRecommendations": true,
-    "editor.fontFamily": "MonoLisa",
+    "editor.fontFamily": "Monolisa",
     "editor.fontLigatures": true,
     "editor.fontSize": 16,
     "editor.lineHeight": 16,
@@ -388,7 +388,9 @@
     },
     "window.zoomLevel": 1,
     "debug.javascript.autoAttachFilter": "smart",
-    "glassit.alpha": 245
+    "glassit.alpha": 245,
+    "editor.fontVariations": false,
+    "terminal.integrated.fontFamily": "JetBrainsMono Nerd Font"
 
     
 }
