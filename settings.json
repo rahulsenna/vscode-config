@@ -157,7 +157,7 @@
                 "magicFunction": {"foreground": "#af5070", "fontStyle": "bold italic"},
 
                 "module": "#f9ae58",
-                "namespace":{"foreground":"#dbdbaa", "fontStyle":"italic"} ,                
+                "namespace":{"foreground":"#4ec9b0", "fontStyle":"italic"} ,                
                 "class": "#4eaab0",
                 "class.builtin": {"fontStyle": "italic"},
                 "type": "#4ec9b0",
@@ -233,7 +233,7 @@
     },
     "editor.minimap.enabled": false,
     "extensions.ignoreRecommendations": true,
-    "editor.fontFamily": "Monolisa",
+    "editor.fontFamily": "Victor Mono SemiBold",// "Monolisa", //
     "editor.fontLigatures": true,
     "editor.fontSize": 16,
     "editor.lineHeight": 16,
