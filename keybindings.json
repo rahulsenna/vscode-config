@@ -430,7 +430,7 @@
         // "command": "simpleAutocomplete.next",
         "command": "postfixer.fix",
         // "command": "rahulvscodeplugin.tab",
-        "when": "editorTextFocus && modal.insert && !editorHasSelection"
+        "when": "editorTextFocus && modal.insert && !editorHasSelection && !inSnippetMode"
     },
     {
         "key": "shift+tab",

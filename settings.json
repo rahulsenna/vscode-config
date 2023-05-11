@@ -210,7 +210,7 @@
 
     "editor.semanticHighlighting.enabled": true,
     //         ClangD
-    "clangd.path": "/home/agent/.config/Code/User/globalStorage/llvm-vs-code-extensions.vscode-clangd/install/15.0.6/clangd_15.0.6/bin/clangd",
+    "clangd.path": "/home/agent/.config/Code/User/globalStorage/llvm-vs-code-extensions.vscode-clangd/install/16.0.2/clangd_16.0.2/bin/clangd",
     // "clangd.semanticHighlighting": true,
     "clangd.restartAfterCrash": true,
     "clangd.checkUpdates": true,
@@ -229,11 +229,11 @@
     "cmake.cmakePath": "cmake",
     "[cpp]": {
         "editor.lineNumbers": "on",
-        "editor.defaultFormatter": "llvm-vs-code-extensions.vscode-clangd",
+        "editor.defaultFormatter": "ms-vscode.cpptools",
     },
     "editor.minimap.enabled": false,
     "extensions.ignoreRecommendations": true,
-    "editor.fontFamily": "Victor Mono SemiBold",// "Monolisa", //
+    "editor.fontFamily":  "Monolisa", //"Victor Mono SemiBold",//
     "editor.fontLigatures": true,
     "editor.fontSize": 16,
     "editor.lineHeight": 16,
@@ -251,15 +251,15 @@
 
     "explorer.confirmDelete": false,
     
-    "C_Cpp.clang_format_path": "clang-format",
-    "C_Cpp.enhancedColorization": "Enabled",
-    "C_Cpp.experimentalFeatures": "Enabled",
+    "C_Cpp.enhancedColorization": "enabled",
+    "C_Cpp.experimentalFeatures": "enabled",
     "C_Cpp.default.compileCommands": "${workspaceFolder}/build",
-    "C_Cpp.intelliSenseEngine": "Disabled",
+    "C_Cpp.intelliSenseEngine": "default",
+    // "C_Cpp.clang_format_path": "clang-format",
 
     "C_Cpp.autocompleteAddParentheses": true,
-    "C_Cpp.configurationWarnings": "Enabled",
-    "C_Cpp.errorSquiggles": "Enabled",
+    "C_Cpp.configurationWarnings": "enabled",
+    "C_Cpp.errorSquiggles": "enabled",
 
     "debug.onTaskErrors": "debugAnyway",
     "terminal.integrated.tabs.enabled": true,
