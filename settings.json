@@ -99,8 +99,10 @@
     },
     "editor.inlayHints.enabled": "on",
     "editor.inlayHints.fontSize": 13.5,
-    // "editor.hideCursorInOverviewRuler": true,
+    "editor.hideCursorInOverviewRuler": true,
     "editor.cursorStyle": "block",
+    "editor.cursorSurroundingLines": 25,
+    "editor.cursorSurroundingLinesStyle": "all",
 
     "workbench.colorCustomizations": {
  
@@ -229,14 +231,14 @@
     "cmake.cmakePath": "cmake",
     "[cpp]": {
         "editor.lineNumbers": "on",
-        "editor.defaultFormatter": "ms-vscode.cpptools",
+        // "editor.defaultFormatter": "ms-vscode.cpptools",
     },
     "editor.minimap.enabled": false,
     "extensions.ignoreRecommendations": true,
     "editor.fontFamily":  "Monolisa", //"Victor Mono SemiBold",//
     "editor.fontLigatures": true,
-    "editor.fontSize": 16,
-    "editor.lineHeight": 16,
+    "editor.fontSize": 23,
+    "editor.lineHeight": 25,
     "workbench.editor.tabSizing": "fit",
     "editor.lineNumbers": "on",
 
@@ -254,8 +256,8 @@
     "C_Cpp.enhancedColorization": "enabled",
     "C_Cpp.experimentalFeatures": "enabled",
     "C_Cpp.default.compileCommands": "${workspaceFolder}/build",
-    "C_Cpp.intelliSenseEngine": "default",
-    // "C_Cpp.clang_format_path": "clang-format",
+    "C_Cpp.intelliSenseEngine": "disabled",
+    "C_Cpp.clang_format_path": "clang-format",
 
     "C_Cpp.autocompleteAddParentheses": true,
     "C_Cpp.configurationWarnings": "enabled",
@@ -386,11 +388,12 @@
     "[python]": {
         "editor.formatOnType": true
     },
-    "window.zoomLevel": 1,
     "debug.javascript.autoAttachFilter": "smart",
     "glassit.alpha": 245,
     "editor.fontVariations": false,
-    "terminal.integrated.fontFamily": "JetBrainsMono Nerd Font"
+    "terminal.integrated.fontFamily": "JetBrainsMono Nerd Font",
+    "workbench.colorTheme": "Default Dark+",
+    "diffEditor.ignoreTrimWhitespace": false
 
     
 }

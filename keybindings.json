@@ -103,7 +103,7 @@
     },
     {
         "key": "a l",
-        "command": "editor.action.smartSelect.expand",
+        "command": "editor.action.smartSelect.grow",
         "when": "editorTextFocus && modal.normal"
     },
     {
@@ -142,27 +142,27 @@
         "command": "jump-and-select.redo",
         "when": "editorTextFocus  && modal.normal"
     },
-    {
-        "key": "[",
-        "command": "jump-backwards",
-        "when": "editorTextFocus && modal.normal"
-    },
-    {
-        "key": "]",
-        "command": "jump-forward",
-        "when": "editorTextFocus && modal.normal"
-    },
+    // {
+    //     "key": "[",
+    //     "command": "jump-backwards",
+    //     "when": "editorTextFocus && modal.normal"
+    // },
+    // {
+    //     "key": "]",
+    //     "command": "jump-forward",
+    //     "when": "editorTextFocus && modal.normal"
+    // },
 
-    {
-        "key": "[",
-        "command": "jump-backwards-selection",
-        "when": "editorTextFocus && modal.normal && modal.visual"
-    },
-    {
-        "key": "]",
-        "command": "jump-forward-selection",
-        "when": "editorTextFocus && modal.normal && modal.visual"
-    },
+    // {
+    //     "key": "[",
+    //     "command": "jump-backwards-selection",
+    //     "when": "editorTextFocus && modal.normal && modal.visual"
+    // },
+    // {
+    //     "key": "]",
+    //     "command": "jump-forward-selection",
+    //     "when": "editorTextFocus && modal.normal && modal.visual"
+    // },
 
     // {
     //     "key": "a i",
@@ -175,14 +175,14 @@
     //     "when": "editorTextFocus && modal.normal"
     // },
     {
-        "key": "a [",
+        "key": "[",
         "command": "editor.action.jumpToBracket",
         "when": "editorTextFocus && modal.normal"
     },
     {
-        "key": "a ]",
+        "key": "[",
         "command": "editor.action.selectToBracket",
-        "when": "editorTextFocus && modal.normal"
+        "when": "editorTextFocus && modal.normal && modal.visual"
     },
     
     {
@@ -232,6 +232,7 @@
     //     "key": "ctrl+alt+shift+9",
     //     "command": "modaledit.enterNormal",
     //     // "when": "modaledit.normal";
+
     // },
     {
         "key": "ctrl+alt+5",
@@ -401,9 +402,14 @@
         "command": "surround.with",
         "when": "editorTextFocus && modal.normal"
     },
+    // {
+    //     "key": "a u",
+    //     "command": "rahulvscodeplugin.unwrap",
+    //     "when": "editorTextFocus && modal.normal"
+    // },
     {
         "key": "a u",
-        "command": "rahulvscodeplugin.unwrap",
+        "command": "editor.action.removeBrackets",
         "when": "editorTextFocus && modal.normal"
     },
     {
