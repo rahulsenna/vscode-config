@@ -256,8 +256,12 @@
     },
     {
         "key": "ctrl+alt+p",
-        "command": "workbench.action.quickOpen"
+        "command": "clangd.inlayHints.toggle",
     },
+    // {
+        // "key": "ctrl+alt+p",
+        // "command": "workbench.action.quickOpen"
+    // },
     {
         "key": "ctrl+p",
         "command": "-workbench.action.quickOpen"

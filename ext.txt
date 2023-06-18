@@ -3,7 +3,6 @@ code --install-extension bbenoist.shell
 code --install-extension cschlosser.doxdocgen
 code --install-extension DigitalBrainstem.javascript-ejs-support
 code --install-extension GitHub.copilot
-code --install-extension haneefdm.memview
 code --install-extension hashicorp.terraform
 code --install-extension hbenl.vscode-mocha-test-adapter
 code --install-extension hbenl.vscode-test-explorer
@@ -17,6 +16,7 @@ code --install-extension kevinglasson.cornflakes-linter
 code --install-extension krnik.vscode-jumpy
 code --install-extension llvm-vs-code-extensions.vscode-clangd
 code --install-extension maziac.asm-code-lens
+code --install-extension mcu-debug.debug-tracker-vscode
 code --install-extension mhutchie.git-graph
 code --install-extension ms-dotnettools.vscode-dotnet-runtime
 code --install-extension ms-python.isort

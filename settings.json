@@ -97,7 +97,7 @@
 
         }
     },
-    "editor.inlayHints.enabled": "on",
+    "editor.inlayHints.enabled": "off",
     "editor.inlayHints.fontSize": 13.5,
     "editor.hideCursorInOverviewRuler": true,
     "editor.cursorStyle": "block",
@@ -212,7 +212,7 @@
 
     "editor.semanticHighlighting.enabled": true,
     //         ClangD
-    "clangd.path": "/home/agent/.config/Code/User/globalStorage/llvm-vs-code-extensions.vscode-clangd/install/16.0.2/clangd_16.0.2/bin/clangd",
+    "clangd.path": "c:\\Users\\agentofchaos\\AppData\\Roaming\\Code\\User\\globalStorage\\llvm-vs-code-extensions.vscode-clangd\\install\\16.0.2\\clangd_16.0.2\\bin\\clangd.exe",
     // "clangd.semanticHighlighting": true,
     "clangd.restartAfterCrash": true,
     "clangd.checkUpdates": true,
@@ -263,7 +263,7 @@
     "C_Cpp.configurationWarnings": "enabled",
     "C_Cpp.errorSquiggles": "enabled",
 
-    "debug.onTaskErrors": "debugAnyway",
+    "debug.onTaskErrors": "abort",
     "terminal.integrated.tabs.enabled": true,
     "workbench.editorAssociations": {
         // "*.ipynb": "jupyter.notebook.ipynb"
@@ -333,7 +333,6 @@
 
     "debug.allowBreakpointsEverywhere": true,
     "asm-code-lens.donated": true,
-    "debug.disassemblyView.showSourceCode": false,
 
     "jumpy.wordRegexp": "[a-zA-Z0-9_]{1,}",
     "jumpy.primaryCharset": "jkliuo;h",
@@ -393,7 +392,11 @@
     "editor.fontVariations": false,
     "terminal.integrated.fontFamily": "JetBrainsMono Nerd Font",
     "workbench.colorTheme": "Default Dark+",
-    "diffEditor.ignoreTrimWhitespace": false
+    "diffEditor.ignoreTrimWhitespace": false,
+    "git.enableSmartCommit": true,
+    "debug.inlineValues": "on",
+    "debug.internalConsoleOptions": "neverOpen",
+    "debug.openDebug": "neverOpen"
 
     
 }
