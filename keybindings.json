@@ -506,7 +506,7 @@
     {
         "key": "f8",
         "command": "python.debugInTerminal",
-        "when": "editorLangId == python"
+        "when": "!inDebugMode && editorLangId == python && debuggersAvailable && debugState != 'initializing'"
     },
 
     {
