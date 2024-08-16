@@ -38,7 +38,8 @@
 
         "[Default Dark+]": {
 
-            "comments": "#707070",
+            // "comments": "#707070",
+            "comments": "#98fb98",
             "strings": "#cd9069",
             "numbers": "#6897BB",
             "textMateRules": [
@@ -97,7 +98,8 @@
 
         }
     },
-    "editor.inlayHints.enabled": "off",
+    "editor.inlayHints.enabled": "offUnlessPressed",
+    "editor.inlayHints.fontFamily": "Monolisa",
     "editor.inlayHints.fontSize": 13.5,
     "editor.hideCursorInOverviewRuler": true,
     "editor.cursorStyle": "block",
@@ -116,7 +118,7 @@
         "titleBar.activeBackground": "#0B0c0f",
         
         "editor.background": "#0B0c0f",
-        "editorIndentGuide.background": "#0B0c0f",
+        "editorIndentGuide.background1": "#0B0c0f",
         "editorWhitespace.foreground": "#0B0c0f",
         "editorGroupHeader.tabsBackground": "#0B0c0f",
         
@@ -134,6 +136,13 @@
 
         "editorInlayHint.foreground": "#707070",
         "editorInlayHint.background": "#000000", 
+
+        // "editor.wordHighlightBorder": "#ff00ff66",
+        // "editor.wordHighlightStrongBorder": "#ff00ff66",
+        // "editor.wordHighlightTextBorder": "#ff00ff66",
+        // "editor.selectionHighlightBorder": "#ff00ff66"
+
+
 
         },
         "[Gruvbox Dark Hard]": {
@@ -171,6 +180,12 @@
                 
                 "parameter": "#C586C0",
                 "selfParameter": {"foreground":"#C586C0", "fontStyle": "italic bold"},
+                "variable.static": "#66bde6",
+                "function.static": "#c9c97f",
+                "method.static": "#c9c97f",
+                "decorator": "#ff0000",
+                "*.static": "#ff0000",
+
             },  
         },
         "[Gruvbox Dark Hard]": {
@@ -211,8 +226,7 @@
     
 
     "editor.semanticHighlighting.enabled": true,
-    //         ClangD
-    "clangd.path": "c:\\Users\\agentofchaos\\AppData\\Roaming\\Code\\User\\globalStorage\\llvm-vs-code-extensions.vscode-clangd\\install\\16.0.2\\clangd_16.0.2\\bin\\clangd.exe",
+    "clangd.path": "C:/Program Files/LLVM/bin/clangd.exe",
     // "clangd.semanticHighlighting": true,
     "clangd.restartAfterCrash": true,
     "clangd.checkUpdates": true,
@@ -221,11 +235,12 @@
     "clangd.onConfigChanged": "restart",
     // "clangd.serverCompletionRanking": true,
     "clangd.arguments": [
-        "--header-insertion-decorators=0",
-        "--background-index",
-        "--clang-tidy",
-        "--compile-commands-dir=${workspaceFolder}/build",
+        // "--header-insertion-decorators=0",
+        // "--background-index",
+        // "--clang-tidy",
+        // "--compile-commands-dir=${workspaceFolder}/build",
     ],
+    "clangd.detectExtensionConflicts": true,
     "cmake.configureOnOpen": true,
     "cmake.generator": "Ninja",
     "cmake.cmakePath": "cmake",
@@ -235,12 +250,12 @@
     },
     "editor.minimap.enabled": false,
     "extensions.ignoreRecommendations": true,
-    "editor.fontFamily":  "Monolisa", //"Victor Mono SemiBold",//
-    "editor.fontLigatures": true,
-    "editor.fontSize": 20,
-    "editor.lineHeight": 22,
+    "editor.fontFamily": "Monolisa",//"Monaco",// "JetBrains Mono", //"Monolisa", //"Monaspace Radon", // r "Monolisa", //"Victor Mono SemiBold",//
+    "editor.fontLigatures": "'calt', 'liga', 'dlig', 'ss01', 'ss02'",
+    // "editor.fontLigatures": true,
+    "editor.fontSize": 16,
+    "editor.lineHeight": 16,
     "workbench.editor.tabSizing": "fit",
-    "editor.lineNumbers": "on",
 
     "git.decorations.enabled": true,
     "editor.glyphMargin": true,
@@ -256,19 +271,21 @@
     "C_Cpp.enhancedColorization": "enabled",
     "C_Cpp.experimentalFeatures": "enabled",
     "C_Cpp.default.compileCommands": "${workspaceFolder}/build",
-    "C_Cpp.intelliSenseEngine": "disabled",
+    "C_Cpp.intelliSenseEngine": "default",
     "C_Cpp.clang_format_path": "clang-format",
-
+    "C_Cpp.formatting": "vcFormat",
     "C_Cpp.autocompleteAddParentheses": true,
     "C_Cpp.configurationWarnings": "enabled",
     "C_Cpp.errorSquiggles": "enabled",
-
-    "debug.onTaskErrors": "abort",
-    "terminal.integrated.tabs.enabled": true,
+    "C_Cpp.inlayHints.autoDeclarationTypes.enabled": true,
+    "C_Cpp.inlayHints.parameterNames.enabled": true,
+    "C_Cpp.inlayHints.parameterNames.suppressWhenArgumentContainsName": true,
+    
+    
     "workbench.editorAssociations": {
-        // "*.ipynb": "jupyter.notebook.ipynb"
+        "*.bplist": "hexEditor.hexedit"
     },
-    "python.defaultInterpreterPath": "/home/agent/werk/AntiPIracy/proc/.venv",
+    
     "editor.inlineSuggest.enabled": true,
     "github.copilot.enable": {
         "*": true,
@@ -323,15 +340,19 @@
         // You can add more ...
     },
     "editor.quickSuggestionsDelay": 3000,
+    "editor.quickSuggestions": {
+    "comments": "off",
+    "strings": "off",
+    "other": "off"
+    },
     "javascript.suggest.completeFunctionCalls": true,
     "emmet.triggerExpansionOnTab": true,
     "editor.suggestOnTriggerCharacters": false,
     "problems.sortOrder": "severity",
     "postfixer.fallback_command": "rahulvscodeplugin.tab",
-    "window.menuBarVisibility": "toggle",
     "problems.defaultViewMode": "table",
 
-    "debug.allowBreakpointsEverywhere": true,
+    
     "asm-code-lens.donated": true,
 
     "jumpy.wordRegexp": "[a-zA-Z0-9_]{1,}",
@@ -396,7 +417,67 @@
     "git.enableSmartCommit": true,
     "debug.inlineValues": "on",
     "debug.internalConsoleOptions": "neverOpen",
-    "debug.openDebug": "neverOpen"
+    "debug.openDebug": "neverOpen",
+    "debug.onTaskErrors": "abort",
+    "debug.allowBreakpointsEverywhere": true,
+    "python.defaultInterpreterPath": "python",
+    // "python.defaultInterpreterPath": "/home/agent/werk/AntiPIracy/proc/.venv",
+    "python.analysis.inlayHints.callArgumentNames": "all",
+    "security.workspace.trust.untrustedFiles": "open",
+    "errorLens.enabled": false,
+    "hexeditor.columnWidth": 32,
+    "hexeditor.showDecodedText": true,
+    "hexeditor.defaultEndianness": "little",
+    "hexeditor.inspectorType": "aside",
+    "workbench.activityBar.location": "top",
+    "window.menuBarVisibility": "toggle",
+    "leetcode.workspaceFolder": "C:\\Users\\agentofchaos\\Desktop\\LeetCode",
+    // "leetcode.workspaceFolder": "/home/agent/.leetcode",
+    "leetcode.hint.commandShortcut": false,
+    "leetcode.defaultLanguage": "cpp",
+    "leetcode.filePath": {
 
+        "default": {
+            "folder": "",
+            "filename": "${id}.${kebab-case-name}.${ext}",
+        }
     
+    },
+
+
+    "terminal.integrated.profiles.windows": {
+        "msys mingw64": {
+            "path": "C:/msys64/msys2_shell.cmd",
+            "args": [
+                "-defterm",
+                "-here",
+                "-no-start",
+                "-mingw64"
+            ]
+        }
+    },
+
+    "cmake.pinnedCommands": [
+        "workbench.action.tasks.configureTaskRunner",
+        "workbench.action.tasks.runTask"
+    ],
+    // "cph.general.defaultLanguage": "cpp",
+    // "cph.general.defaultLanguageTemplateFileLocation": "C:\\Users\\agentofchaos\\Desktop\\LeetCode\\template.cpp",
+    // "cph.language.cpp.SubmissionCompiler": "GNU G++20 13.2 (64 bit, winlibs)",
+    // "cph.language.cpp.Command": "cl",
+    // "cph.language.cpp.Args": "/DONLINE_JUDGE /Z7 /EHsc /nologo  C:\\Users\\agentofchaos\\Desktop\\LeetCode\\bits\\stdc++.obj /std:c++latest /JMC /fsanitize=address /diagnostics:caret",
+    // "cph.language.cpp.Args": "/DONLINE_JUDGE /Z7 /EHsc /nologo /Yubits/stdc++.h bits/stdc++.obj /std:c++latest /JMC /fsanitize=address /diagnostics:caret",
+    // "cph.language.cpp.Args": "/DONLINE_JUDGE",
+    "debug-leetcode.miDebuggerPath": "/usr/local/bin/gdb",
+    "leetcode.hint.configWebviewMarkdown": false,
+    "leetcode.showDescription": "In File Comment",
+    "git.ignoreRebaseWarning": true,
+    "leetcode.hint.commentDescription": false,
+    "terminal.integrated.enableMultiLinePasteWarning": "never",
+    "javascript.updateImportsOnFileMove.enabled": "always",
+    "typescript.updateImportsOnFileMove.enabled": "always",
+    "diffEditor.hideUnchangedRegions.enabled": true,
+    "cSpell.enabled": false,
+    "debug.terminal.clearBeforeReusing": true,
+    "cmake.options.statusBarVisibility": "compact"
 }
