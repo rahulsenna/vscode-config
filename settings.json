@@ -246,6 +246,7 @@
     "cmake.cmakePath": "cmake",
     "[cpp]": {
         "editor.lineNumbers": "on",
+        "editor.defaultFormatter": "ms-vscode.cpptools",
         // "editor.defaultFormatter": "ms-vscode.cpptools",
     },
     "editor.minimap.enabled": false,
@@ -302,49 +303,14 @@
     "editor.bracketPairColorization.enabled": true,
     "redhat.telemetry.enabled": false,
     
-    "surround.showOnlyUserDefinedSnippets": true,
-    "surround.custom": {
-        // command name must be unique
-        "if": {
-            "label": "if",
-            "description": "if Custom",
-            "disabled": false,
-            "snippet": "if(${1:condition}) \n{\n\t$TM_SELECTED_TEXT\n}$0",
-            "languageIds": ["c","cpp"]
-        },
-        "ifelse": {
-            "label": "if else",
-            "description": "if else Custom",
-            "disabled": false,
-            "snippet": "if(${1:condition}) \n{\n\t$TM_SELECTED_TEXT\n}else\n{}$0",
-            "languageIds": ["c","cpp"]
-        },
-        "#if0": {
-            "label": "#if0",
-            "description": "#if 0",
-            "disabled": false,
-            "snippet": "#if 0 \n\t$TM_SELECTED_TEXT\n#endif$0",
-            "languageIds": ["c","cpp"]        },
-        "#if0Else": {
-            "label": "#if0 Else",
-            "description": "#if 0 Else",
-            "disabled": false,
-            "snippet": "#if 0 \n\t$TM_SELECTED_TEXT\n#else\n#endif$0",
-            "languageIds": ["c","cpp"]        },
-        "for": {
-            "label": "for",
-            "description": "for (u32 $i = 0; $i < $n; $i++) Custom",
-            "disabled": false,
-            "snippet": "for(u32 ${1:I} = 0; ${1:I} < ${2:n}; ${1:I}++) \n{\n\t$TM_SELECTED_TEXT\n}",
-            "languageIds": ["c","cpp"]},
-        // You can add more ...
-    },
+
     "editor.quickSuggestionsDelay": 3000,
     "editor.quickSuggestions": {
     "comments": "off",
     "strings": "off",
     "other": "off"
     },
+    
     "javascript.suggest.completeFunctionCalls": true,
     "emmet.triggerExpansionOnTab": true,
     "editor.suggestOnTriggerCharacters": false,

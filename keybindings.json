@@ -669,7 +669,7 @@
     },
     {
         "key": "a s",
-        "command": "surround.with",
+        "command": "editor.action.surroundWithSnippet",
         "when": "editorTextFocus && modal.normal && !terminalFocus"
     },
 
@@ -1049,7 +1049,7 @@
     {
         "key": ".",
         "command": "rahulvscodeplugin.dotORarrow",
-        "when": "editorLangId == c || editorLangId == cpp && modal.insert && editorTextFocus"
+        "when": "editorLangId == c || editorLangId == cpp && !modal.search && modal.insert && editorTextFocus"
     },
 
     {
