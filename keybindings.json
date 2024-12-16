@@ -1223,5 +1223,37 @@
         "key": "ctrl+alt+i",
         "command": "editor.action.insertCursorAbove",
         "when": "editorTextFocus && modal.normal"
-    }
+    },
+
+
+
+
+
+
+    // {
+    //     "key": "alt+i",
+    //     "command": "editor.action.insertSnippet",
+    //     "args": { "snippet": "=" },
+    //     "when": "editorTextFocus"
+    // },
+    // {
+    //     "key": "alt+k",
+    //     "command": "editor.action.insertSnippet",
+    //     "args": { "snippet": "_" },
+    //     "when": "editorTextFocus"
+    // },
+    // {
+    //     "key": "alt+u",
+    //     "command": "editor.action.insertSnippet",
+    //     "args": { "snippet": "-" },
+    //     "when": "editorTextFocus"
+    // },
+    // {
+    //     "key": "alt+o",
+    //     "command": "editor.action.insertSnippet",
+    //     "args": { "snippet": "+" },
+    //     "when": "editorTextFocus"
+    // },
+
+
 ]
