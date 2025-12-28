@@ -646,7 +646,6 @@
 
     // "editor.overviewRulerBorder": false,
     "editor.renderLineHighlight": "gutter",
-    "workbench.colorTheme": "Catppuccin Mocha",
 
     "powermode.enabled": false,
     "workbench.tree.enableStickyScroll": false,
@@ -706,7 +705,6 @@
     "screencastMode.onlyKeyboardShortcuts": true,
     "diffEditor.codeLens": true,
     "python.defaultInterpreterPath": "/opt/homebrew/bin/python3",
-    "window.newWindowProfile": "Minimal",
     "editor.codeLens": false,
     "[dockercompose]": {
         "editor.insertSpaces": true,
@@ -719,5 +717,6 @@
     },
 
     
-    "chat.disableAIFeatures": true
+    "chat.disableAIFeatures": true,
+    "workbench.colorTheme": "Catppuccin Mocha"
 }
