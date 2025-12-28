@@ -1,0 +1,723 @@
+{
+    "editor.tokenColorCustomizations": {
+
+       "textMateRules":
+        [
+            {
+                "scope": [
+                    "keyword",
+                    "storage.modifier",
+                    "storage.type",
+                    "constant"
+                ],
+                "settings": {
+                    "fontStyle": "italic bold"
+                }
+            },
+            {
+                "scope": [
+                    "keyword.operator.logical",
+                    "keyword.control.flow.block-scalar.literal"
+                ],
+                "settings": {
+                    "fontStyle": ""
+                }
+            }
+        ],
+        
+
+        "[Default Dark+]": {
+
+            // "comments": "#707070",
+            "comments": "#98fb98",
+            "strings": "#cd9069",
+            "numbers": "#6897BB",
+            "textMateRules": [
+                {
+                    "scope": "keyword.control.directive",
+                    "settings": {
+                        "foreground": "#9b9b9b",
+                    }
+                },
+
+                {
+                    "scope": "variable.other.property",
+                    "settings": {
+                        "foreground": "#DADADA",
+                    }
+                },
+                {
+                    "scope": "keyword.control",
+                    "settings": {
+                        "foreground": "#569CD6",
+                    }
+                },
+            ],
+
+        },
+
+        "[Gruvbox Dark Hard]": {
+            "textMateRules": [
+                {
+                    "scope": "support.type",
+                    "settings": {
+                        "foreground": "#b8bb26",
+                    }
+                },
+                {
+                    "scope": "keyword.operator.new",
+                    "settings": {
+                        "foreground": "#FB4934",
+                    }
+                },
+                {
+                    "scope": "storage.type.function",
+                    "settings": {
+                        "foreground": "#FB4934",
+
+                    }
+                },
+                {
+                    "scope": "constant.numeric",
+                    "settings": {
+                        "foreground": "#ebdbb2",
+                    }
+                }
+                
+            ],
+
+        }
+    },
+    "editor.inlayHints.enabled": "offUnlessPressed",
+    "editor.inlayHints.fontFamily": "MonoLisa", // "MonoLisa Nerd Font Mono", //"Monolisa",
+    "editor.inlayHints.fontSize": 13.5,
+    "editor.hideCursorInOverviewRuler": true,
+    "editor.cursorStyle": "block",
+    // "editor.cursorBlinking": "expand",
+    "editor.cursorSurroundingLines": 7,
+
+
+    // "editor.cursorSurroundingLinesStyle": "all",
+    // "editor.cursorSmoothCaretAnimation": "explicit",
+
+    "catppuccin.boldKeywords": true,
+    "catppuccin.italicKeywords": false,
+
+    "workbench.colorCustomizations": {
+ 
+
+        "[Default Dark+]": {
+        // "editorCursor.foreground": "#629655",
+        "editorCursor.foreground": "#00ff00",
+        "editorCursor.background": "#000000",
+        "menu.background": "#0B0c0f",
+        "sideBar.background": "#0B0c0f",
+        "titleBar.activeBackground": "#0B0c0f",
+        
+        "editor.background": "#0B0c0f",
+        "editorIndentGuide.background1": "#0B0c0f",
+        "editorWhitespace.foreground": "#0B0c0f",
+        "editorGroupHeader.tabsBackground": "#0B0c0f",
+        
+        "tab.inactiveBackground": "#0B0c0f",
+        "tab.activeBackground": "#0B0c0f",
+        "tab.activeBorder": "#488fec",
+        "tab.border": "#010f10",
+
+        "activityBar.activeBackground": "#0B0c0f",
+        "activityBar.border": "#0B0c0f",
+        "activityBar.background": "#0B0c0f",
+
+        "terminal.border": "#262424",
+
+
+        // "editorInlayHint.foreground": "#707070",
+        // "editorInlayHint.background": "#000000", 
+
+        // "editor.wordHighlightBorder": "#ff00ff66",
+        // "editor.wordHighlightStrongBorder": "#ff00ff66",
+        // "editor.wordHighlightTextBorder": "#ff00ff66",
+        // "editor.selectionHighlightBorder": "#ff00ff66"
+
+
+
+        },
+        "[Gruvbox Dark Hard]": {
+            // "editorInlayHint.foreground": "#928374",
+            // "editorInlayHint.background": "#1D2021",  
+
+        },
+        "editorBracketMatch.border": "#ffff00",
+        // "editorBracketMatch.background": "#ffff00",
+        "[Catppuccin Mocha]": {
+            "editor.foldBackground": "#1e1e2e00",
+        }
+ 
+    },
+    "editor.semanticTokenColorCustomizations": {
+        "[Catppuccin Mocha]": {
+
+            /*
+
+            Color	       Hex	     RGB	HSL
+            Rosewater      #f5e0dc	 rgb(245, 224, 220)	 hsl(10deg, 56%, 91%)         
+                        
+            Flamingo       #f2cdcd	 rgb(242, 205, 205)	 hsl(0deg, 59%, 88%)        
+                        
+            Pink           #f5c2e7	 rgb(245, 194, 231)	 hsl(316deg, 72%, 86%)    
+                        
+            Mauve          #cba6f7	 rgb(203, 166, 247)	 hsl(267deg, 84%, 81%)     
+                        
+            Red            #f38ba8	 rgb(243, 139, 168)	 hsl(343deg, 81%, 75%)   
+                        
+            Maroon         #eba0ac	 rgb(235, 160, 172)	 hsl(350deg, 65%, 77%)      
+                        
+            Peach          #fab387	 rgb(250, 179, 135)	 hsl(23deg, 92%, 75%)     
+                        
+            Yellow         #f9e2af	 rgb(249, 226, 175)	 hsl(41deg, 86%, 83%)      
+                        
+            Green          #a6e3a1	 rgb(166, 227, 161)	 hsl(115deg, 54%, 76%)     
+                        
+            Teal           #94e2d5	 rgb(148, 226, 213)	 hsl(170deg, 57%, 73%)    
+                        
+            Sky            #89dceb	 rgb(137, 220, 235)	 hsl(189deg, 71%, 73%)   
+                        
+            Sapphire       #74c7ec	 rgb(116, 199, 236)	 hsl(199deg, 76%, 69%)        
+                        
+            Blue           #89b4fa	 rgb(137, 180, 250)	 hsl(217deg, 92%, 76%)    
+                        
+            Lavender       #b4befe	 rgb(180, 190, 254)	 hsl(232deg, 97%, 85%)        
+                        
+            Text           #cdd6f4	 rgb(205, 214, 244)	 hsl(226deg, 64%, 88%)    
+                        
+            Subtext 1      #bac2de	 rgb(186, 194, 222)	 hsl(227deg, 35%, 80%)         
+                        
+            Subtext 0      #a6adc8	 rgb(166, 173, 200)	 hsl(228deg, 24%, 72%)         
+                        
+            Overlay 2      #9399b2	 rgb(147, 153, 178)	 hsl(228deg, 17%, 64%)         
+                        
+            Overlay 1      #7f849c	 rgb(127, 132, 156)	 hsl(230deg, 13%, 55%)         
+                        
+            Overlay 0      #6c7086	 rgb(108, 112, 134)	 hsl(231deg, 11%, 47%)         
+                        
+            Surface 2      #585b70	 rgb(88, 91, 112)	 hsl(233deg, 12%, 39%)         
+                        
+            Surface 1      #45475a	 rgb(69, 71, 90)	 hsl(234deg, 13%, 31%)         
+                        
+            Surface 0      #313244	 rgb(49, 50, 68)	 hsl(237deg, 16%, 23%)         
+                        
+            Base           #1e1e2e	 rgb(30, 30, 46)	 hsl(240deg, 21%, 15%)    
+                        
+            Mantle         #181825	 rgb(24, 24, 37)	 hsl(240deg, 21%, 12%)      
+                        
+            Crust          #11111b	     
+                        
+            */
+
+            "rules": {
+                // "variable": "#DADADA", // Sky
+                // "variable": "#f9e2af", // Yellow
+                "variable": "#89b4fa", // blue
+                "property": "#DADADA", // Base
+
+                "macro": "#f5c2e7",    // Lavender
+                "variable.readonly": "#b4befe", // Lavender
+                "builtinConstant": {"foreground":"#beb7ff", "fontStyle": "italic bold"}, // Lavender
+
+                // "method": "#89b4fa",   // Yellow
+                // "function": "#89b4fa", // Yellow
+                "method": "#f9e2af",   // Yellow
+                "function": "#f9e2af", // Yellow
+                // "function": {"foreground": "#f9e2af", "fontStyle": ""}, // Yellow
+                "function.builtin": {"fontStyle": "italic bold"},
+                "magicFunction": {"foreground": "#f28fad", "fontStyle": "italic bold"}, // Pink
+
+                "module": "#fab387",    // Peach
+                // "namespace":{"foreground":"#94e2d5", "fontStyle":"italic"} , // Cyan
+                "namespace":"#94e2d5", // Cyan
+                "class": "#f9e2af",     // Green
+                // "class": {"foreground":"#f9e2af", "fontStyle": ""}, // Green
+
+                "class.builtin": {"fontStyle": "italic bold"},
+                "type": "#94e2d5",      // Cyan
+                // "type":{"foreground":"#94e2d5", "fontStyle":""} , // Cyan
+
+                "interface": {"foreground":"#f9e2af", "fontStyle": "italic"}, // Green
+
+                "enum": "#4eaacf",      // Blue
+                "enumMember": {"foreground": "#DADADA", "fontStyle": "italic" }, // Base
+                "operator": "#C586C0",    // Mauve
+
+                "parameter": "#f38ba8", //  Red
+                "selfParameter": {"foreground":"#C586C0", "fontStyle": "italic bold"}, // Mauve
+                "variable.static": "#66bde6", // Blue
+                "function.static": "#c9c97f", // Green-Yellow
+                "method.static": "#c9c97f",   // Green-Yellow
+                "decorator": "#f0c674",     // Gold (more muted than red)
+                "*.static": "#f0c674",      // Gold (more muted than red)
+            },  
+        },
+        "[Gruvbox Dark Hard]": {
+            "rules": {
+                // "variable": "#83a598",
+                "variable": "#8ec07c",
+                // "variable": "#458588",
+                "property": "#ebdbb2",
+
+                "macro": "#ae7cc0",
+                "variable.readonly": "#ae7cc0",
+                "builtinConstant": {"foreground":"#ae7cc0", "fontStyle": "italic"},
+                // "function": "#fe8019",
+                // "method": "#d08019",
+                // "method": "#d79921",
+                "method": "#fad02f",
+                "function": "#fabd2f",
+                "function.builtin": {"fontStyle": "italic bold"},
+                "magicFunction": {"foreground": "#2161d7", "fontStyle": "bold italic"},
+
+
+                "module": "#fe8019",
+                "namespace":{"foreground":"#fe8019", "fontStyle":"italic"} ,
+                "class": "#b8CC26",
+                "class.builtin": {"fontStyle": "italic"},
+                "type": "#b8bb26",
+                "interface": {"foreground":"#98BD1a", "fontStyle": "italic"},
+                
+                "enum": "#f8f8f2",
+                "enumMember": {"foreground": "#ebdbb2", "fontStyle": "italic"},
+                "operator": "#b16286",
+
+                "parameter": "#d3869b",
+                "selfParameter": {"foreground":"#d3869b","fontStyle": "italic bold"},
+            },
+        },
+        "[Default Dark+]": {
+
+            "rules": {
+                "variable": "#94dbfd",
+                "property": "#DADADA",
+
+                "macro": "#beb7ff",
+                "variable.readonly": "#beb7ff",
+                "builtinConstant": {"foreground":"#beb7ff", "fontStyle": "italic",},
+
+                "method": "#dbdbaa",
+                "function": "#dbdbaa",
+                "function.builtin": {"fontStyle": "italic bold"},
+                "magicFunction": {"foreground": "#af5070", "fontStyle": "bold italic"},
+
+                "module": "#f9ae58",
+                "namespace":{"foreground":"#4ec9b0", "fontStyle":"italic"} ,                
+                "class": "#4eaab0",
+                "class.builtin": {"fontStyle": "italic"},
+                "type": "#4ec9b0",
+                "interface": {"foreground":"#4eaab0", "fontStyle": "italic"},
+
+                "enum": "#4eaacf",
+                "enumMember": {"foreground": "#DADADA", "fontStyle": "italic"},
+                "operator": "#C586C0",
+                
+                "parameter": "#C586C0",
+                "selfParameter": {"foreground":"#C586C0", "fontStyle": "italic bold"},
+                "variable.static": "#66bde6",
+                "function.static": "#c9c97f",
+                "method.static": "#c9c97f",
+                "decorator": "#ff0000",
+                "*.static": "#ff0000",
+
+            },  
+        }
+    },
+    
+
+    "editor.semanticHighlighting.enabled": true,
+    // "clangd.semanticHighlighting": true,
+    "clangd.restartAfterCrash": true,
+    "clangd.checkUpdates": true,
+    // "clangd.fallbackFlags": [],
+    // "clangd.trace": "",
+    "clangd.onConfigChanged": "restart",
+    // "clangd.serverCompletionRanking": true,
+    "clangd.arguments": [
+        // "--header-insertion-decorators=0",
+        // "--background-index",
+        // "--clang-tidy",
+        // "--compile-commands-dir=${workspaceFolder}/build",
+    ],
+    "clangd.detectExtensionConflicts": true,
+    "cmake.configureOnOpen": true,
+    "cmake.generator": "Ninja",
+    "cmake.cmakePath": "cmake",
+    "[cpp]": {
+        "editor.lineNumbers": "on",
+        "editor.defaultFormatter": "ms-vscode.cpptools",
+    },
+    "editor.minimap.enabled": false,
+    "extensions.ignoreRecommendations": true,
+    "editor.fontVariations": true,
+    // "editor.fontWeight": "500",
+    "editor.fontFamily": "MonoLisa",// "MonoLisa Nerd Font Mono",//"Monolisa",//"Monaco",// "JetBrains Mono", //"Monolisa", //"Monaspace Radon", // r "Monolisa", //"Victor Mono SemiBold",//
+    // "editor.fontLigatures": "'calt', 'liga', 'dlig', 'ss01', 'ss02'",
+    "editor.fontLigatures": "'calt', 'liga', 'dlig', 'frac', 'ss03', 'ss07', 'ss08', 'ss09','ss11', 'ss12', 'ss15', 'ss17', 'ss02'", // ,, 'ss02'
+    // "editor.fontLigatures": true,
+
+    "editor.fontSize": 15,
+    "editor.lineHeight": 17,
+    "workbench.editor.tabSizing": "fit",
+
+    "git.decorations.enabled": true,
+    "editor.glyphMargin": true,
+    "editor.folding": true,
+    "editor.renderControlCharacters": true,
+    "editor.smoothScrolling": true,
+    // terminal font size;
+    "terminal.integrated.fontSize": 20,
+    "debug.console.fontSize": 20,
+    
+
+    "explorer.confirmDelete": false,
+
+    // custom defaults
+    "C_Cpp.default.cppStandard": "c++23",
+    "C_Cpp.default.cStandard": "c17", 
+    "C_Cpp.default.includePath": [
+        "${workspaceFolder}/**",
+        "/opt/homebrew/Cellar/gcc/15.1.0/include", 
+        "/opt/homebrew/Cellar/gcc/15.1.0/include/c++/15",
+        "/opt/homebrew/Cellar/gcc/15.1.0/include/c++/15/aarch64-apple-darwin24"
+    ],
+
+    
+    "C_Cpp.enhancedColorization": "enabled",
+    "C_Cpp.experimentalFeatures": "enabled",
+    "C_Cpp.default.compileCommands": "${workspaceFolder}/build",
+    "C_Cpp.intelliSenseEngine": "default",
+    "C_Cpp.clang_format_path": "/opt/homebrew/bin/clang-format",
+    "C_Cpp.formatting": "clangFormat",
+    // "C_Cpp.formatting": "vcFormat",
+    "C_Cpp.autocompleteAddParentheses": true,
+    "C_Cpp.configurationWarnings": "enabled",
+    "C_Cpp.errorSquiggles": "enabled",
+    "C_Cpp.inlayHints.autoDeclarationTypes.enabled": true,
+    "C_Cpp.inlayHints.parameterNames.enabled": true,
+    "C_Cpp.inlayHints.parameterNames.suppressWhenArgumentContainsName": true,
+    
+    
+    "workbench.editorAssociations": {
+        "*.bplist": "hexEditor.hexedit"
+    },
+    
+    "editor.inlineSuggest.enabled": true,
+    "github.copilot.enable": {
+        "*": true,
+        "yaml": false,
+        "plaintext": true,
+        "markdown": true,
+        "scminput": false,
+        "jsonc": true,
+        "cpp": true,
+        "javascript": true,
+        "json": false
+    },
+    "editor.guides.bracketPairs": "active",
+    "editor.bracketPairColorization.enabled": true,
+    "redhat.telemetry.enabled": false,
+    
+
+    "editor.quickSuggestionsDelay": 3000,
+    "editor.quickSuggestions": {
+    "comments": "off",
+    "strings": "off",
+    "other": "off"
+    },
+    
+    "javascript.suggest.completeFunctionCalls": true,
+    "emmet.triggerExpansionOnTab": true,
+    "editor.suggestOnTriggerCharacters": false,
+    "problems.sortOrder": "severity",
+    "postfixer.fallback_command": "rahulvscodeplugin.tab",
+    // "editor.tabCompletion": "onlySnippets",
+    "problems.defaultViewMode": "table",
+    
+
+    
+    "asm-code-lens.donated": true,
+
+    "jumpy.wordRegexp": "[a-zA-Z0-9_]{1,}",
+    "jumpy.primaryCharset": "jkliuo;h",
+    "jumpy.display.backgroundColor": "#00000088",
+    "jumpy.display.color": "#0af0c1",
+
+
+
+    "debug.disassemblyView.showSourceCode": true,
+ 
+    // "jumpy.display.color": "#ff0000"
+    "minify.js": {
+        "mangle": true,
+        "compress": {
+            "sequences": true,
+            "properties": true,
+            "dead_code": true,
+            "drop_debugger": true,
+            "unsafe": false,
+            "unsafe_comps": false,
+            "conditionals": true,
+            "comparisons": true,
+            "evaluate": true,
+            "booleans": true,
+            "loops": true,
+            "unused": true,
+            "hoist_funs": true,
+            "keep_fargs": true,
+            "keep_fnames": false,
+            "hoist_vars": true,
+            "if_return": true,
+            "join_vars": true,
+            "collapse_vars": true,
+            "reduce_vars": true,
+            "side_effects": true,
+            "pure_getters": false,
+            "pure_funcs": null,
+            "negate_iife": false,
+            "drop_console": true,
+            "passes": 1,
+            "global_defs": {}
+        },
+        "output": {
+            "ascii_only": false,
+            "inline_script": false,
+            "max_line_len": 32000,
+            "braces": false,
+            "semicolons": true,
+            "comments": false,
+            "shebang": true,
+            "preamble": null,
+            "quote_style": "best"
+        }
+    },
+    "[python]": {
+        "editor.defaultFormatter": "ms-python.autopep8",
+        "editor.formatOnType": true
+    },
+    "debug.javascript.autoAttachFilter": "smart",
+    "glassit.alpha": 245,
+    "terminal.integrated.fontFamily": "JetBrainsMono Nerd Font",
+    "diffEditor.ignoreTrimWhitespace": false,
+    "git.enableSmartCommit": true,
+    "debug.inlineValues": "on",
+    "debug.internalConsoleOptions": "neverOpen",
+    "debug.openDebug": "neverOpen",
+    "debug.onTaskErrors": "abort",
+    "debug.allowBreakpointsEverywhere": true,
+    // "python.defaultInterpreterPath": "C:\\Users\\agentofchaos\\AppData\\Local\\Microsoft\\WindowsApps\\python3.11.exe",
+    // "python.defaultInterpreterPath": "/home/agent/werk/AntiPIracy/proc/.venv",
+    "python.analysis.inlayHints.callArgumentNames": "all",
+    "security.workspace.trust.untrustedFiles": "open",
+    "errorLens.enabled": false,
+    "hexeditor.columnWidth": 16,
+    "hexeditor.showDecodedText": true,
+    "hexeditor.defaultEndianness": "little",
+    "hexeditor.inspectorType": "aside",
+    "workbench.activityBar.location": "top",
+    "window.menuBarVisibility": "toggle",
+    "leetcode.workspaceFolder": "C:\\Users\\agentofchaos\\Desktop\\LeetCode",
+    // "leetcode.workspaceFolder": "/home/agent/.leetcode",
+    "leetcode.hint.commandShortcut": false,
+    "leetcode.defaultLanguage": "cpp",
+    "leetcode.filePath": {
+
+        "default": {
+            "folder": "",
+            "filename": "${id}.${kebab-case-name}.${ext}",
+        }
+    
+    },
+
+
+    "terminal.integrated.profiles.windows": {
+        "msys mingw64": {
+            "path": "C:/msys64/msys2_shell.cmd",
+            "args": [
+                "-defterm",
+                "-here",
+                "-no-start",
+                "-mingw64"
+            ]
+        }
+    },
+
+    "cmake.pinnedCommands": [
+        "workbench.action.tasks.configureTaskRunner",
+        "workbench.action.tasks.runTask"
+    ],
+    // "cph.general.defaultLanguage": "cpp",
+    // "cph.general.defaultLanguageTemplateFileLocation": "C:\\Users\\agentofchaos\\Desktop\\LeetCode\\template.cpp",
+    // "cph.language.cpp.SubmissionCompiler": "GNU G++20 13.2 (64 bit, winlibs)",
+    // "cph.language.cpp.Command": "cl",
+    // "cph.language.cpp.Args": "/DONLINE_JUDGE /Z7 /EHsc /nologo  C:\\Users\\agentofchaos\\Desktop\\LeetCode\\bits\\stdc++.obj /std:c++latest /JMC /fsanitize=address /diagnostics:caret",
+    // "cph.language.cpp.Args": "/DONLINE_JUDGE /Z7 /EHsc /nologo /Yubits/stdc++.h bits/stdc++.obj /std:c++latest /JMC /fsanitize=address /diagnostics:caret",
+    // "cph.language.cpp.Args": "/DONLINE_JUDGE",
+    "debug-leetcode.miDebuggerPath": "/usr/local/bin/gdb",
+    "leetcode.hint.configWebviewMarkdown": false,
+    "leetcode.showDescription": "In File Comment",
+    "git.ignoreRebaseWarning": true,
+    "leetcode.hint.commentDescription": false,
+    "terminal.integrated.enableMultiLinePasteWarning": "never",
+    "javascript.updateImportsOnFileMove.enabled": "always",
+    "typescript.updateImportsOnFileMove.enabled": "always",
+    "debug.terminal.clearBeforeReusing": true,
+    "cmake.options.statusBarVisibility": "compact",
+    "explorer.fileNesting.patterns": {
+        "*.ts": "${capture}.js",
+        "*.js": "${capture}.js.map, ${capture}.min.js, ${capture}.d.ts",
+        "*.jsx": "${capture}.js",
+        "*.tsx": "${capture}.ts",
+        "tsconfig.json": "tsconfig.*.json",
+        "package.json": "package-lock.json, yarn.lock, pnpm-lock.yaml, bun.lockb",
+        "*.fs": "${basename}.fsi, ${basename}.fs.js, ${basename}.fs.js.map",
+        "*.fsl": "${basename}.fsi, ${basename}.fs",
+        "*.fsy": "${basename}.fsi, ${basename}.fs",
+        "*.cs": "${capture}.designer.cs,${capture}.g.cs,${capture}.generated.cs,${capture}.run.json,${capture}.settings.json,${capture}.settings.*.json",
+        "*.csproj": "${capture}.csproj.user",
+        "*.json": "${capture}.Development.json",
+        "*.cshtml": "${capture}.cshtml.cs,${capture}.cshtml.css",
+        "*.razor": "${capture}.razor.cs,${capture}.razor.css",
+        "*.xaml": "${capture}.xaml.cs",
+        "*.sqlite": "${capture}.${extname}-*",
+        "*.db": "${capture}.${extname}-*",
+        "*.sqlite3": "${capture}.${extname}-*",
+        "*.db3": "${capture}.${extname}-*",
+        "*.sdb": "${capture}.${extname}-*",
+        "*.s3db": "${capture}.${extname}-*"
+    },
+    "window.newWindowDimensions": "maximized",
+    "zig.zls.enabled": "on",
+    "C_Cpp.default.compilerPath": "/usr/bin/clang++",
+
+
+
+
+
+
+
+    // "search.mode": "newEditor",
+    "search.mode": "view",
+    "search.showLineNumbers": true,
+    "search.actionsPosition": "right",
+    "search.defaultViewMode": "tree",
+    "search.quickAccess.preserveInput": true,
+    "search.useIgnoreFiles": false,
+    "search.exclude": {
+        "**/node_modules": true,
+        "**/bower_components": true,
+        "**/*.code-search": true
+    },
+    "search.smartCase": true,
+
+
+
+    
+
+    // -----------------------------------------------
+        "vscode_custom_css.imports": [
+        "file:///Users/agentofchaos/vscode.css",
+        "file:///Users/agentofchaos/vscode.js"
+
+    ],
+    
+
+
+
+    // Silence the Noise
+    "editor.guides.indentation": false,
+    
+    // "files.insertFinalNewline": true,
+    "workbench.editor.showTabs": "none",
+
+    // "editor.hover.delay": 1500,
+    // "editor.hover.enabled": true,
+
+    // "workbench.tips.enabled": false,
+    // "editor.colorDecorators": false,
+
+    // "workbench.startupEditor": "none",
+    // "editor.lightbulb.enabled": "off",
+
+    // "editor.overviewRulerBorder": false,
+    "editor.renderLineHighlight": "gutter",
+    "workbench.colorTheme": "Catppuccin Mocha",
+
+    "powermode.enabled": false,
+    "workbench.tree.enableStickyScroll": false,
+
+
+    // "editor.gotoLocation.multipleReferences": "goto",
+    // "editor.gotoLocation.multipleDefinitions": "goto",
+    // "editor.gotoLocation.multipleDeclarations": "goto",
+    // "workbench.editor.enablePreviewFromQuickOpen": false,
+    // "editor.gotoLocation.multipleImplementations": "goto",
+    // "editor.gotoLocation.multipleTypeDefinitions": "goto",
+    "editor.stickyScroll.maxLineCount": 2,
+    "headerSourceSwitch.mappings": [
+
+        {
+            "header": [
+                ".h",
+                ".hpp",
+                ".hh",
+                ".hxx"
+            ],
+            "source": [
+                ".cpp",
+                ".c",
+                ".cc",
+                ".cxx",
+                ".m",
+                ".mm"
+            ],
+            "name": "C++"
+        },
+
+        {
+            "header": [
+                ".frag",
+                ".fs",
+            ],
+            "source": [
+                ".vert",
+                ".vs",
+            ],
+            "name": "glsl"
+        }
+    ],
+    "cSpell.enabled": false,
+    "git.confirmSync": false,
+    "editor.accessibilitySupport": "off",
+    "screencastMode.keyboardOptions": {
+        // "showKeys": true,
+        // "showKeybindings": false,
+        // "showCommands": false,
+        // "showCommandGroups": false,
+        // "showSingleEditorCursorMoves": true,
+        
+    },
+    "screencastMode.verticalOffset": 10,
+    "screencastMode.onlyKeyboardShortcuts": true,
+    "diffEditor.codeLens": true,
+    "python.defaultInterpreterPath": "/opt/homebrew/bin/python3",
+    "window.newWindowProfile": "Minimal",
+    "editor.codeLens": false,
+    "[dockercompose]": {
+        "editor.insertSpaces": true,
+        "editor.tabSize": 2,
+        "editor.autoIndent": "advanced",
+        "editor.defaultFormatter": "redhat.vscode-yaml"
+    },
+    "[github-actions-workflow]": {
+        "editor.defaultFormatter": "redhat.vscode-yaml"
+    },
+
+    
+    "chat.disableAIFeatures": true
+}

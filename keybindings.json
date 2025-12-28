@@ -1,0 +1,1884 @@
+// Place your key bindings in this file to override the defaultsauto[]
+[
+    {
+        "key": ";",
+        "command": "rahulvscodeplugin.normal",
+        "when": "modal.insert && !modal.search"
+    },
+    {
+        "key": ";",
+        "command": "rahulvscodeplugin.semicolon",
+        "when": "editorTextFocus && modal.normal && !modal.search"
+    },
+    {
+        "key": ";",
+        "command": "cursorEnd",
+        "when": "editorTextFocus && modal.normal && !modal.search && (editorLangId == 'jsonc' || editorLangId == 'xaml') "
+    },
+    {
+        "key": "ctrl+;",
+        "command": "editor.action.insertSnippet",
+        "args": {
+            "snippet": ";"
+        }
+    },
+    
+    //--------------insert modes  --------------
+
+    {
+        "key": "a k",
+        "command": "rahulvscodeplugin.command_and_insert", 
+        "args": "editor.action.insertLineAfter",
+        "when": "editorTextFocus && modal.normal && !terminalFocus" 
+    },
+    {
+        "key": "a i",
+        "command": "rahulvscodeplugin.command_and_insert",
+        "args": "editor.action.insertLineBefore",
+        "when": "editorTextFocus && modal.normal && !terminalFocus"
+    },
+    {
+        "key": "a j",
+        "command": "rahulvscodeplugin.command_and_insert",
+        "args": "cursorHome",
+        "when": "editorTextFocus && modal.normal && !terminalFocus" 
+    },
+    {
+        "key": "a l",
+        "command": "rahulvscodeplugin.command_and_insert",
+        "args": "cursorEnd",
+        "when": "editorTextFocus && modal.normal && !terminalFocus"
+    },
+    {
+        "key": "a d",
+        "command": "editor.action.duplicateSelection",
+        "when": "editorTextFocus && modal.normal && !terminalFocus"
+    },
+    {
+        "key": "a b",
+        "command": "editor.action.goToReferences",
+        "when": "editorHasDefinitionProvider && editorTextFocus && modal.normal && !isInEmbeddedEditor && !terminalFocus"
+    },
+    {
+        "key": "b",
+        "command": "editor.action.revealDefinition",
+        "when": "editorHasDefinitionProvider && editorTextFocus && modal.normal && !isInEmbeddedEditor && !renameInputVisible"
+    },
+    {
+        "key": "b",
+        "command": "goToNextReference",
+        "when": "inReferenceSearchEditor || referenceSearchVisible && !renameInputVisible"
+    },
+    {
+        "key": "a b",
+        "command": "goToPreviousReference",
+        "when": "inReferenceSearchEditor || referenceSearchVisible && !terminalFocus"
+    },
+
+    
+/*
+    {
+        "key": "shift+.",
+        "command": "rahulvscodeplugin.command_and_insert",
+        "args": "editor.action.insertLineBefore",
+        "when": "editorTextFocus && modal.normal"    
+    },
+     {
+        "key": ". i",
+        "command": "rahulvscodeplugin.command_and_insert",
+        "args": "editor.action.insertLineAfter",
+        "when": "editorTextFocus && modal.normal"    
+    },
+    {
+        "key": ". k",
+        "command": "rahulvscodeplugin.command_and_insert",
+        "args": "editor.action.insertLineBefore",
+        "when": "editorTextFocus && modal.normal"
+    },
+    {
+        "key": ". j",
+        "command": "rahulvscodeplugin.command_and_insert",
+        "args": "cursorLeft",
+        "when": "editorTextFocus && modal.normal"
+    },
+
+    {
+        "key": ". u",
+        "command": "rahulvscodeplugin.command_and_insert",
+        "args": "cursorHome",
+        "when": "editorTextFocus && modal.normal"
+    },
+
+    {
+        "key": ". o",
+        "command": "rahulvscodeplugin.command_and_insert",
+        "args": "cursorEnd",
+        "when": "editorTextFocus && modal.normal"
+    },
+
+
+    {
+        "key": ". l",
+        "command": "rahulvscodeplugin.command_and_insert",
+        "args": "cursorRight",
+        "when": "editorTextFocus && modal.normal"
+    },
+
+    {
+        "key": ". s",
+        "command": "rahulvscodeplugin.command_and_insert",
+        "args": "cursorWordPartRight",
+        "when": "editorTextFocus && modal.normal"
+    },
+
+    {
+        "key": ". a",
+        "command": "rahulvscodeplugin.command_and_insert",
+        "args": "cursorWordPartLeft",
+        "when": "editorTextFocus && modal.normal"
+    },
+
+    {
+        "key": ". f",
+        "command": "rahulvscodeplugin.command_and_insert",
+        "args": "cursorWordRight",
+        "when": "editorTextFocus && modal.normal"
+    }, 
+
+    {
+        "key": ". d",
+        "command": "rahulvscodeplugin.command_and_insert",
+        "args": "cursorWordLeft",
+        "when": "editorTextFocus && modal.normal"
+    },
+*/
+
+    //-----------------------
+    {
+        "key": "a z",
+        "command": "redo",
+        "when": "editorTextFocus && !editorReadonly && modal.normal && !terminalFocus"
+    },
+    {
+        "key": "z",
+        "command": "undo",
+        "when": "editorTextFocus && !editorReadonly && modal.normal && !renameInputVisible"
+    },
+    {
+        "key": "a g",
+        "command": "editor.action.smartSelect.grow",
+        "when": "editorTextFocus && modal.normal && !terminalFocus"
+    },
+    {
+        "key": "a ;",
+        "command": "editor.action.smartSelect.shrink",
+        "when": "editorTextFocus && modal.normal && !terminalFocus"
+    },
+    //-----------------------------------------------------------------
+    //                      Find and Jump
+    {
+        "key": "/",
+        "command": "rahulvscodeplugin.command_and_insert",
+        "args": "jump-and-select.jumpForward",
+        // "args": "extension.jumpy-enter",
+        "when": "editorTextFocus  && modal.normal"
+    },
+    {
+        "key": "a /",
+        "command": "rahulvscodeplugin.command_and_insert",
+        "args": "jump-and-select.jumpBackward",
+        "when": "editorTextFocus  && modal.normal && !terminalFocus"
+    },
+    //   with selection
+    {
+        "key": "/",
+        "command": "rahulvscodeplugin.command_and_insert",
+        "args": "jump-and-select.jumpForwardSelect",
+        "when": "editorTextFocus && modal.normal && modal.visual"
+    },
+    {
+        "key": "a /",
+        "command": "rahulvscodeplugin.command_and_insert",
+        "args": "jump-and-select.jumpBackwardSelect",
+        "when": "editorTextFocus  && modal.normal && modal.visual && !terminalFocus"
+    },
+
+    {
+        "key": "a space",
+        "command": "jump-and-select.redo",
+        "when": "editorTextFocus  && modal.normal && !terminalFocus"
+    },
+    //-----------------------------------------------------------------
+
+    //-----------------------------------------------------------------
+    //                      Quick Select
+
+    {
+        "key": "n",
+        "command": "rahulvscodeplugin.swapCursorPosInSelection",
+        "when": "modal.visual && editorTextFocus && !renameInputVisible"
+    },
+    {
+        "key": "ctrl+i",
+        "command": "extension.incrementSelection",
+        "when": "editorTextFocus && editorHasMultipleSelections"
+    },
+    {
+        "key": "ctrl+k",
+        "command": "extension.decrementSelection",
+        "when": "editorTextFocus && editorHasMultipleSelections"
+    },
+
+    {
+        "key": "9",
+        "command": "extension.selectParenthesis",
+        "when": "editorTextFocus && modal.normal && modal.visual && !renameInputVisible"
+    },
+    {
+        "key": "0",
+        "command": "extension.selectParenthesis",
+        "when": "editorTextFocus && modal.normal && modal.visual && !renameInputVisible"
+    },
+    {
+        "key": ",",
+        "command": "extension.selectAngleBrackets",
+        "when": "editorTextFocus && modal.normal && modal.visual"
+    },
+    {
+        "key": "'",
+        "command": "extension.selectDoubleQuote",
+        "when": "editorTextFocus && modal.normal && modal.visual"
+    },
+    {
+        "key": "a '",
+        "command": "extension.selectSingleQuote",
+        "when": "editorTextFocus && modal.normal && modal.visual && !terminalFocus"
+    },
+    {
+        "key": "[",
+        "command": "extension.selectCurlyBrackets",
+        "when": "editorTextFocus && modal.normal && modal.visual"
+    },
+    {
+        "key": "a [",
+        "command": "extension.selectSquareBrackets",
+        "when": "editorTextFocus && modal.normal && modal.visual && !terminalFocus"
+    },
+    {
+        "key": "]",
+        "command": "editor.action.selectToBracket",
+        "when": "editorTextFocus && modal.normal && modal.visual"
+    },
+    //-----------------------------------------------------------------
+    {
+        "key": "[",
+        "command": "editor.action.jumpToBracket",
+        "when": "editorTextFocus && modal.normal && !modal.visual"
+    },
+
+
+    {
+        "key": "a '",
+        "command": "bracketeer.swapQuotes",
+        "when": "editorTextFocus  && modal.normal && !modal.visual && !terminalFocus"
+    },
+    {
+        "key": "a [",
+        "command": "bracketeer.swapBrackets",
+        "when": "editorTextFocus  && modal.normal && !modal.visual && !terminalFocus"
+    },
+    
+    
+    
+
+    
+    
+
+    
+    
+    /*     
+    {
+        "key": "k",
+        "command": "workbench.action.previousEditorInGroup",
+        "when": "editorTextFocus && modal.delete"
+    },
+    {
+        "key": "i",
+        "command": "workbench.action.nextEditorInGroup",
+        "when": "editorTextFocus && modal.delete"
+    }, 
+    */
+    
+    
+    
+    // {
+    //     "key": "a u",
+    //     "command": "rahulvscodeplugin.unwrap",
+    //     "when": "editorTextFocus && modal.normal && !terminalFocus"
+    // },
+    {
+        "key": "a u",
+        "command": "editor.action.removeBrackets",
+        "when": "editorTextFocus && modal.normal && !terminalFocus"
+    },
+
+    // insert mode  cursor move up down left right
+
+    
+    
+
+    /* 
+    
+     
+    */
+    
+     
+    
+
+    
+    
+
+
+    // {
+    //     "key": "[",
+    //     "command": "jump-backwards",
+    //     "when": "editorTextFocus && modal.normal"
+    // },
+    // {
+    //     "key": "]",
+    //     "command": "jump-forward",
+    //     "when": "editorTextFocus && modal.normal"
+    // },
+
+    // {
+    //     "key": "[",
+    //     "command": "jump-backwards-selection",
+    //     "when": "editorTextFocus && modal.normal && modal.visual"
+    // },
+    // {
+    //     "key": "]",
+    //     "command": "jump-forward-selection",
+    //     "when": "editorTextFocus && modal.normal && modal.visual"
+    // },
+
+    // {
+    //     "key": "a i",
+    //     "command": "editor.action.jumpToBracket",
+    //     "when": "editorTextFocus && modal.normal && !terminalFocus"
+    // },
+    // {
+    //     "key": "a k",
+    //     "command": "editor.action.selectToBracket",
+    //     "when": "editorTextFocus && modal.normal && !terminalFocus"
+    // },
+
+    
+    
+    
+    {
+        "key": "ctrl+up", // whatever keybinding you want
+        "command": "cursorMove",
+        "args": {
+            "to": "prevBlankLine",
+        },
+        "when": "editorTextFocus"
+    },
+    {
+        "key": "ctrl+down",
+        "command": "cursorMove",
+        "args": {
+            "to": "nextBlankLine",
+        },
+        "when": "editorTextFocus"
+    },
+    // 
+    // 
+    // 
+    
+    {
+        "key": "ctrl+shift+down",
+        "command": "editor.action.moveLinesDownAction",
+        "when": "editorTextFocus && !editorReadonly"
+    },
+    {
+        "key": "ctrl+shift+up",
+        "command": "editor.action.moveLinesUpAction",
+        "when": "editorTextFocus && !editorReadonly"
+    },
+    {
+        "key": "ctrl+p",
+        "command": "editor.action.triggerParameterHints",
+        "when": "editorHasSignatureHelpProvider && editorTextFocus"
+    },
+    
+    // 
+    {
+        "key": "ctrl+p",
+        "command": "-workbench.action.quickOpen"
+    },
+    {
+        "key": "ctrl+o",
+        "command": "workbench.action.quickOpen"
+    },
+    {
+        "key": "`",
+        "command": "workbench.action.toggleSidebarVisibility"
+    },
+
+
+    // {
+    //     "key": "shift shift shift shift",
+    //     "command": "workbench.action.gotoSymbol"
+    // },
+    {
+        "key": "ctrl+j",
+        "command": "-workbench.action.togglePanel"
+    },
+    
+    {
+        "key": "ctrl+shift+delete",
+        "command": "deleteAllRight"
+    },
+    {
+        "key": "ctrl+shift+backspace",
+        "command": "deleteAllLeft"
+    },
+    {
+        "key": "alt+backspace",
+        "command": "deleteWordPartLeft"
+    },
+    {
+        "key": "alt+delete",
+        "command": "deleteWordPartRight"
+    },
+    {
+        "key": "ctrl+shift+tab",
+        "command": "workbench.action.quickOpenLeastRecentlyUsedEditorInGroup",
+        "when": "!activeEditorGroupEmpty"
+    },
+    {
+        "key": "ctrl+shift+tab",
+        "command": "-workbench.action.quickOpenLeastRecentlyUsedEditorInGroup",
+        "when": "!activeEditorGroupEmpty"
+    },
+    {
+        "key": "ctrl+k ctrl+left",
+        "command": "-workbench.action.focusLeftGroup"
+    },
+    {
+        "key": "ctrl+k ctrl+left",
+        "command": "workbench.action.focusLastEditorGroup"
+    },
+    {
+        "key": "ctrl+k ctrl+left",
+        "command": "workbench.action.focusPreviousGroup",
+    },
+    
+    // 
+    
+    {
+        "key": "ctrl+shift+tab",
+        "command": "workbench.action.nextEditorInGroup"
+    },
+    {
+        "key": "ctrl+k ctrl+pagedown",
+        "command": "-workbench.action.nextEditorInGroup"
+    },
+    {
+        "key": "ctrl+k end",
+        "command": "workbench.action.splitEditorToLastGroup"
+    },
+    {
+        "key": "ctrl+k end",
+        "command": "workbench.action.splitEditorToFirstGroup",
+        "when": "activeEditorGroupLast"
+    },
+    {
+        "key": "alt+`",
+        "command": "workbench.action.toggleActivityBarVisibility"
+    },
+    {
+        "key": "f1",
+        "command": "-workbench.action.showCommands"
+    },
+    
+    {
+        "key": "f2",
+        "command": "editor.action.marker.nextInFiles",
+        "when": "editorFocus"
+    },
+    {
+        "key": "f1",
+        "command": "editor.action.marker.prevInFiles",
+        "when": "editorFocus"
+    },
+    {
+        "key": "f1",
+        "command": "closeMarkersNavigation",
+        "when": "editorFocus && !problemsVisibility"
+    },
+
+
+    
+    {
+        "key": "escape",
+        "command": "extension.multiCommand.execute",
+        "args": { 
+            "sequence": [
+                "workbench.action.closePanel",
+                "workbench.action.closeSidebar",
+                "workbench.action.closeAuxiliaryBar",
+                "closeFindWidget"
+            ]
+        },
+        "when": "!modal.visual && (!terminal.active || !terminalFocus) && (panelVisible || sideBarVisible || auxiliaryBarVisible || findWidgetVisible)"
+    },
+    {
+        "key": "escape",
+        "command": "workbench.action.terminal.toggleTerminal",
+        "when": "terminal.active && terminalFocus"
+    },
+    {
+        "key": "escape",
+        "command": "removeSecondaryCursors",
+        "when": "editorHasMultipleSelections && textInputFocus"
+    },
+
+
+/* 
+    {
+        "key": "escape",
+        "command": "workbench.action.terminal.toggleTerminal",
+        "when": "terminal.active && terminalFocus"
+    },
+    {
+        "key": "escape",
+        "command": "workbench.action.closePanel",
+        "when": "!modal.visual && panelVisible"
+    },
+    {
+        "key": "escape",
+        "command": "workbench.action.closeAuxiliaryBar",
+        "when": "!modal.visual && auxiliaryBarVisible"
+    },
+    {
+        "key": "escape",
+        "command": "workbench.action.closeSidebar",
+        "when": "!modal.visual && sideBarVisible"
+    },
+    
+    {
+        "key": "escape",
+        "command": "closeMarkersNavigation",
+        "when": "editorFocus && markersNavigationVisible"
+    },
+    {
+        "key": "escape",
+        "command": "closeFindWidget",
+        "when": "findInputFocussed || findWidgetVisible"
+    },
+*/
+    
+    // {
+    //     "key": "y",
+    //     // "command": "clangd.switchheadersource",
+    //     "command": "rahulvscodeplugin.headerSource",
+    //     "when": "editorTextFocus && modal.normal"
+    // },
+    {
+        "key": "g",
+        "command": "rahulvscodeplugin.visualOFF",
+        "when": "editorTextFocus && modal.normal && modal.visual && !renameInputVisible"
+    },
+    {
+        "key": "a s",
+        "command": "editor.action.surroundWithSnippet",
+        "when": "editorTextFocus && modal.normal && !terminalFocus  && !renameInputVisible"
+    },
+    {
+        "key": "a p",
+        "command": "editor.action.triggerParameterHints",
+        "when": "editorTextFocus && !modal.visual && modal.normal && !terminalFocus && editorHasSignatureHelpProvider && !renameInputVisible"
+    },
+    {
+        "key": "a h",
+        "command": "editor.action.showHover",
+        "when": "editorTextFocus && !modal.visual && modal.normal && !terminalFocus  && !renameInputVisible"
+    },
+    {
+        "key": "a e",
+        "command": "C_Cpp.ExtractToFunction",
+        "when": "editorTextFocus && modal.visual && modal.normal && !terminalFocus  && !renameInputVisible"
+    },
+    {
+        "key": "a r",
+        "command": "rahulvscodeplugin.replace",
+        "when": "editorTextFocus && modal.normal && !terminalFocus  && !renameInputVisible"
+    },
+    
+    {
+        "key": "ctrl+shift+enter",
+        "command": "editor.action.insertSnippet",
+        "args": {
+            "snippet": "\n{\n\t${0:}\n}"
+        },
+        "when": "editorTextFocus"
+    },
+    {
+        "key": "tab",
+        // "command": "simpleAutocomplete.next",
+        "command": "postfixer.fix",
+        // "command": "rahulvscodeplugin.tab",
+        "when": "editorTextFocus && modal.insert && !editorHasSelection && !inSnippetMode"// && editorLangId != asm-collection"
+    },
+    // {
+    //     "key": "space",
+    //     "command": "editor.action.insertSnippet",
+    //     "args": {"snippet": "\t"},
+    //     "when": "editorLangId == asm-collection && editorTextFocus"
+    // },
+    {
+        "key": "ctrl+space",
+        "command": "editor.action.insertSnippet",
+        "args": {"snippet": " "},
+        "when": "editorLangId == asm-collection"
+    },
+    {
+        "key": "shift+space",
+        "command": "editor.action.insertSnippet",
+        "args": {"snippet": " "},
+        "when": "editorLangId == asm-collection"
+    },
+
+    {
+        "key": "shift+tab",
+        "command": "hippie-completion.prev",
+        "when": "editorTextFocus && modal.insert && !editorHasSelection"
+    },
+    {
+        "key": "shift+space",
+        "command": "editor.action.triggerSuggest",
+        "when": "editorHasCompletionItemProvider && textInputFocus && !editorReadonly"
+    },
+    {
+        "key": "ctrl+enter",
+        "command": "-github.copilot.generate",
+        "when": "editorTextFocus && github.copilot.activated"
+    },
+    {
+        "key": "ctrl+enter",
+        "command": "editor.action.inlineSuggest.trigger",
+        "when": "config.github.copilot.inlineSuggest.enable && editorTextFocus && !editorHasSelection && !inlineSuggestionsVisible"
+    },
+    {
+        "key": "alt+\\",
+        "command": "-editor.action.inlineSuggest.trigger",
+        "when": "config.github.copilot.inlineSuggest.enable && editorTextFocus && !editorHasSelection && !inlineSuggestionsVisible"
+    },
+    // Run/Debug
+
+    {
+        "key": "f7",
+        "command": "-cmake.build",
+        "when": "cmake:enableFullFeatureSet && !cmake:hideBuildCommand"
+    },
+    {
+        "key": "f7",
+        "command": "cmake.launchTarget",
+        "when": "cmake:enableFullFeatureSet && !cmake:hideDebugCommand && !inDebugMode"
+    },
+    {
+        "key": "f7",
+        "command": "python.execInTerminal-icon",
+        "when": "editorLangId == python"
+    },
+
+    {
+        "key": "f7",
+        "command": "workbench.action.debug.run",
+        "when": "editorLangId != python && !inDebugMode && !cmake:enableFullFeatureSet"
+    },
+
+    {
+        "key": "f8",
+        "command": "-editor.action.marker.nextInFiles",
+        "when": "editorFocus"
+    },
+    {
+        "key": "shift+f8",
+        "command": "-editor.action.marker.prevInFiles",
+        "when": "editorFocus"
+    },
+
+
+    {
+        "key": "f8",
+        "command": "python.debugInTerminal",
+        "when": "!inDebugMode && editorLangId == python && debuggersAvailable && debugState != 'initializing'"
+    },
+
+    {
+        "key": "f8",
+        "command": "cmake.debugTarget",
+        "when": "cmake:enableFullFeatureSet && inCMakeProject && !cmake:hideDebugCommand && !inDebugMode"
+    },
+
+    {
+        "key": "f8",
+        "command": "workbench.action.debug.start",
+        // "when": "!inDebugMode && !inCMakeProject"
+        "when": "editorLangId != python && !inDebugMode && !cmake:enableFullFeatureSet"
+
+    },
+
+    // {
+    //     "key": "f8",
+    //     "command": "workbench.action.debug.start",
+    //     "when": "debuggersAvailable && debugState != 'initializing' && !inCMakeProject"
+    // },
+
+
+    {
+        "key": "ctrl+f5",
+        "command": "-workbench.action.debug.run",
+        "when": "debuggersAvailable && debugState != 'initializing'"
+    },
+    // Build F4
+    {
+        "key": "f4",
+        "command": "cmake.build",
+        "when": "cmake:enableFullFeatureSet && !cmake:hideBuildCommand"
+    },
+
+    {
+        "key": "f4",
+        "command": "workbench.action.tasks.runTask",
+        "args": "build",
+        "when": "editorLangId == asm-collection"
+    },
+    {
+        "key": "f4",
+        "command": "python.execInTerminal-icon",
+        "when": "editorLangId == python"
+    },
+    
+    {
+        "key": "f4",
+        "command": "workbench.action.debug.start",
+        "args": "JavaScript",
+        "when": "editorLangId == javascript"
+
+    },
+    {
+        "key": "f4",
+        "command": "workbench.action.tasks.runTask",
+        "args": "TypeScript",
+        "when": "editorLangId == typescript"
+
+    },
+    {
+        "key": "f4",
+        "command": "workbench.action.tasks.runTask",
+        // "when": "editorLangId == c || editorLangId == cpp && !inCMakeProject"
+        "when": "editorLangId != typescript && editorLangId != javascript && editorLangId != python && editorLangId != asm-collection && !cmake:enableFullFeatureSet"
+
+    },
+    // {
+    //     "key": "ctrl+f4",
+    //     "command": "leetcode.showSolution",
+    //     "when": "leetCodeExplorer.visible"
+    // }
+    {
+        "key": "f4",
+        "command": "workbench.action.tasks.restartTask",
+        "args": "LOG APK",
+        "when": "config.workspaceKeybindings.f7.enabled"
+    },
+    {
+        "key": "f4",
+        "command": "workbench.action.tasks.runTask",
+        "args": "LOG APK",
+        "when": "config.workspaceKeybindings.f7.enabled && !taskRunning"
+    },
+
+
+    {
+        "key": "f4",
+        "command": "workbench.action.tasks.runTask",
+        "args": "build game",
+        "when": "config.hotreload_game_code_f4"
+    },
+    {
+        "key": "f4",
+        "command": "workbench.action.tasks.runTask",
+        "args": "codecrafter test",
+        "when": "config.workspaceKeybindings.codecrafters.enabled && !taskRunning"
+    },
+    {
+        "key": "f4",
+        "command": "workbench.action.tasks.runTask",
+        "args": "Build",
+        "when": "!config.workspaceKeybindings.codecrafters.enabled && !taskRunning"
+    },
+
+    {
+        "key": "shift+f5",
+        "command": "-cmake.launchTarget",
+        "when": "cmake:enableFullFeatureSet && !cmake:hideDebugCommand && !inDebugMode"
+    },
+    
+    // Debug mode controls
+   
+    {
+        "key": "f9",
+        "command": "-editor.debug.action.toggleBreakpoint",
+        "when": "debuggersAvailable && editorTextFocus"
+    }, 
+    {
+        "key": "f5",
+        "command": "editor.debug.action.toggleBreakpoint",
+        "when": "debuggersAvailable && editorTextFocus"
+    },
+    {
+        "key": "f8",
+        "command": "workbench.action.debug.stepOver",
+        "when": "inDebugMode"
+    },
+    {
+        "key": "f9",
+        "command": "workbench.action.debug.stepInto",
+        "when": "inDebugMode"
+    },
+    {
+        "key": "f10",
+        "command": "workbench.action.debug.stepOut",
+        "when": "inDebugMode"
+    },
+    {
+        "key": "f11",
+        "command": "workbench.action.debug.continue",
+        "when": "inDebugMode"
+    },
+    {
+        "key": "f12",
+        "command": "workbench.action.debug.restart",
+        "when": "inDebugMode"
+    },
+    {
+        "key": "ctrl+f5",
+        "command": "-cmake.debugTarget",
+        "when": "cmake:enableFullFeatureSet && inCMakeProject && !cmake:hideDebugCommand && !inDebugMode"
+    },
+    {
+        "key": "f5",
+        "command": "-workbench.action.debug.start",
+        "when": "debuggersAvailable && debugState == 'inactive'"
+    },
+    {
+        "key": "f6",
+        "command": "editor.debug.action.selectionToWatch",
+        "when": "inDebugMode"
+    },
+    {
+        "key": "ctrl+/",
+        "command": "editor.action.commentLine",
+        "when": "editorTextFocus && !editorReadonly && editorHasSelection"
+    },
+    {
+        "key": "cmd+/",
+        "command": "rahulvscodeplugin.commentAandMoveDown",
+        "when": "editorTextFocus && !editorReadonly"
+    },
+    {
+        "key": "ctrl+shift+/",
+        "command": "editor.action.blockComment",
+        "when": "editorTextFocus && !editorReadonly && editorHasSelection"
+    },
+    
+    {
+        "key": "ctrl+shift+`",
+        "command": "editor.action.insertSnippet",
+        "args": {"snippet": "`"},
+        "when": "editorFocus"
+    },
+    
+    {
+        "key": "shift+alt+right",
+        "command": "-editor.action.smartSelect.expand",
+        "when": "editorTextFocus"
+    },
+    {
+        "key": "shift+alt+left",
+        "command": "-editor.action.smartSelect.shrink",
+        "when": "editorTextFocus"
+    },
+    {
+        "key": "ctrl+l",
+        "command": "-expandLineSelection",
+        "when": "textInputFocus"
+    },
+
+    {
+        "key": "ctrl+l",
+        "command": "cursorRight",
+        "when": "textInputFocus"
+    },
+    
+    {
+        "key": "ctrl+c",
+        "command": "workbench.action.terminal.copySelection",
+        "when": "terminalFocus && terminalHasBeenCreated && terminalTextSelected || terminalFocus && terminalProcessSupported && terminalTextSelected"
+    },
+    {
+        "key": "ctrl+shift+c",
+        "command": "-workbench.action.terminal.copySelection",
+        "when": "terminalFocus && terminalHasBeenCreated && terminalTextSelected || terminalFocus && terminalProcessSupported && terminalTextSelected"
+    },
+    {
+        "key": "ctrl+v",
+        "command": "workbench.action.terminal.paste",
+        "when": "terminalFocus && terminalHasBeenCreated || terminalFocus && terminalProcessSupported"
+    },
+    {
+        "key": "ctrl+shift+v",
+        "command": "-workbench.action.terminal.paste",
+        "when": "terminalFocus && terminalHasBeenCreated || terminalFocus && terminalProcessSupported"
+    },
+    {
+        "key": "a t u",
+        "command": "editor.action.transformToUppercase",
+        "when": "editorTextFocus && modal.normal && !terminalFocus"
+    },
+    {
+        "key": "a t l",
+        "command": "editor.action.transformToLowercase",
+        "when": "editorTextFocus && modal.normal && !terminalFocus"
+    },
+    {
+        "key": "a t s",
+        "command": "editor.action.transformToSnakecase",
+        "when": "editorTextFocus && modal.normal && !terminalFocus"
+    },
+    {
+        "key": "a t p",
+        "command": "editor.action.transformToPascalcase",
+        "when": "editorTextFocus && modal.normal && !terminalFocus"
+    },
+    {
+        "key": "a t c",
+        "command": "editor.action.transformToCamelcase",
+        "when": "editorTextFocus && modal.normal && !terminalFocus"
+    },
+    {
+        "key": "ctrl+k ctrl+k",
+        "command": "bookmarks.toggle",
+        "when": "editorTextFocus"
+    },
+    
+    {
+        "key": "ctrl+k ctrl+n",
+        "command": "bookmarks.jumpToNext",
+        "when": "editorTextFocus"
+    },
+    
+    {
+        "key": "ctrl+k ctrl+p",
+        "command": "bookmarks.jumpToPrevious",
+        "when": "editorTextFocus"
+    },
+    
+    {
+        "key": "ctrl+f7",
+        "command": "leetcode.testSolution",
+        "when": "leetCodeExplorer.visible"
+    },
+    {
+        "key": "ctrl+f8",
+        "command": "leetcode.submitSolution",
+        "when": "leetCodeExplorer.visible"
+    },
+    
+    
+    {
+        "key": ".",
+        "command": "rahulvscodeplugin.dotORarrow",
+        "when": "!modal.search && modal.insert && !space_fn && editorTextFocus && (editorLangId == c || editorLangId == cpp)"
+    },
+
+    {
+        "key": "ctrl+f5",
+        "command": "workbench.debug.viewlet.action.removeAllBreakpoints"
+    },
+    {
+        "key": "shift+f5",
+        "command": "workbench.debug.viewlet.action.removeAllBreakpoints",
+        "when": "debuggersAvailable && debugState == 'inactive'"
+    },
+    // 
+    // 
+    // 
+    // 
+
+    // 
+
+
+    {
+        "key": "y",
+        "command": "rahulvscodeplugin.headerSourcePrevGroup",
+        "when": "modal.normal && !inQuickOpen && !findInputFocussed && !sideBarFocus && activeEditorGroupLast && !renameInputVisible"
+    },
+    {
+        "key": "y",
+        "command": "rahulvscodeplugin.headerSourceNextGroup",
+        "when": "modal.normal && !inQuickOpen && !findInputFocussed && !sideBarFocus && !activeEditorGroupLast && !renameInputVisible"
+    },
+
+    {
+        "key": "y",
+        "command": "extension.switchLeftPane",
+        "when": "modal.normal && !inQuickOpen && !findInputFocussed && !sideBarFocus && activeEditorGroupLast && !terminalFocus && !renameInputVisible"
+    },
+    {
+        "key": "y",
+        "command": "extension.switchRightPane",
+        "when": "modal.normal && !inQuickOpen && !findInputFocussed && !sideBarFocus && !activeEditorGroupLast && !terminalFocus && !renameInputVisible"
+    },
+
+    {
+        "key": "p",
+        "command": "workbench.action.focusLastEditorGroup",
+        "when": "modal.normal && !inQuickOpen && !findInputFocussed && !sideBarFocus && !terminalFocus && !renameInputVisible"
+    },
+    {
+        "key": "p",
+        "command": "workbench.action.focusPreviousGroup",
+        "when": "modal.normal && !inQuickOpen && !findInputFocussed && !sideBarFocus && !terminalFocus && !renameInputVisible"
+    },
+
+    {
+        "key": "q",
+        "command": "rahulvscodeplugin.switchBetweenTwoFiles",
+        "when": "modal.normal && !inQuickOpen && !findInputFocussed && !sideBarFocus  && !renameInputVisible"
+    },
+    {
+        "key": "a q",
+        "command": "workbench.action.previousEditorInGroup",
+        "when": "editorTextFocus && modal.normal && !terminalFocus"
+    },
+    {
+        "key": "a m",
+        "command": "workbench.action.moveEditorToPreviousGroup",
+        "when": "editorTextFocus && modal.normal && activeEditorGroupLast && !terminalFocus"
+    },
+    {
+        "key": "a m",
+        "command": "workbench.action.moveEditorToNextGroup",
+        "when": "editorTextFocus && modal.normal && !activeEditorGroupLast && !terminalFocus"
+    },
+    {
+        "key": "a o",
+        "command": "rahulvscodeplugin.openFileInPrevGroup",
+        "when": "editorTextFocus && modal.normal && activeEditorGroupLast && !terminalFocus"
+    },
+    {
+        "key": "a o",
+        "command": "rahulvscodeplugin.openFileInNextGroup",
+        "when": "editorTextFocus && modal.normal && !activeEditorGroupLast && !terminalFocus"
+    },
+    {
+        "key": "a c",
+        "command": "workbench.action.closeActiveEditor",
+        "when": "modal.normal && !inQuickOpen && !findInputFocussed && !sideBarFocus && !terminalFocus"
+        // findInputFocussed searchViewletVisible replaceActive inSearchEditor workbench.view.search
+    },
+    
+    {
+        "key": "ctrl+f7",
+        "command": "cph.runTestCases",
+        "when": "cph.judgeView.visible"
+    },
+
+    {
+        "key": "a .",
+        "command": "workbench.action.navigateBackInEditLocations",
+        "when": "editorTextFocus && modal.normal"
+    },
+    {
+        "key": "a ,",
+        "command": "workbench.action.navigateForwardInEditLocations",
+        "when": "editorTextFocus && modal.normal"
+    },
+    {
+        "key": "a 9",
+        "command": "workbench.action.navigateBackInNavigationLocations",
+        "when": "editorTextFocus && modal.normal"
+    },
+    {
+        "key": "a 0",
+        "command": "workbench.action.navigateForwardInNavigationLocations",
+        "when": "editorTextFocus && modal.normal"
+    },
+    // {
+        // "key": "m",
+        // "command": "-workbench.action.navigateBack",
+        // "when": "canNavigateBack && editorTextFocus && modal.normal"
+    // },
+    // {
+    //     "key": "m",
+        // "command": "workbench.action.navigatePreviousInEditLocations",
+        // "command": "workbench.action.navigateToLastEditLocation",
+    //     "when": "editorTextFocus && modal.normal && canNavigateToLastEditLocation"
+    //     // "when": "canNavigateToLastEditLocation && editorTextFocus && modal.normal && !canNavigateBack"
+    // },
+
+  
+    {
+        "key": "m",
+        "command": "navigateEditHistory.moveCursorToPreviousEditInCurrentFile",
+        "when": "editorTextFocus && modal.normal && !renameInputVisible"
+        // "when": "canNavigateToLastEditLocation && editorTextFocus && modal.normal"
+        // "when": "canNavigateToLastEditLocation && editorTextFocus && modal.normal && !canNavigateBack"
+    },
+    {
+        "key": "shift+m",
+        "command": "navigateEditHistory.moveCursorToNextEditInCurrentFile",
+        "when": "editorTextFocus && modal.normal"
+        // "when": "canNavigateToLastEditLocation && editorTextFocus && modal.normal"
+        // "when": "canNavigateToLastEditLocation && editorTextFocus && modal.normal && !canNavigateBack"
+    },
+    {
+        "key": "n",
+        "command": "-workbench.action.navigateForward",
+        "when": "canNavigateForward && editorTextFocus && modal.normal && !renameInputVisible"
+    },
+    {
+        "key": "n",
+        "command": "workbench.action.navigateBack",
+        "when": "editorTextFocus && modal.normal && !modal.visual && !renameInputVisible"
+        // "when": "canNavigateForwardInEditLocations && editorTextFocus && modal.normal && !canNavigateBack"
+    },
+    {
+        "key": "a n",
+        "command": "workbench.action.navigateForward",
+        "when": "editorTextFocus && modal.normal"
+    },
+    {
+        "key": "f20",
+        "command": "workbench.action.files.saveFiles"
+    },
+
+
+    {
+        "key": "f7",
+        "command": "workbench.action.tasks.restartTask",
+        "args": "LOG APK",
+        "when": "config.workspaceKeybindings.f7.enabled"
+    },
+    
+    {
+        "key": "f7",
+        "command": "workbench.action.tasks.runTask",
+        "args": "LOG APK",
+        "when": "config.workspaceKeybindings.f7.enabled && !taskRunning"
+    },
+    
+    {
+        "key": "ctrl+0",
+        "command": "workbench.action.zoomReset"
+    },
+    
+    {
+        "key": "ctrl+shift+=",
+        "command": "editor.action.fontZoomIn"
+    },
+    {
+        "key": "ctrl+shift+-",
+        "command": "editor.action.fontZoomOut"
+    },
+    {
+        "key": "ctrl+shift+0",
+        "command": "editor.action.fontZoomReset"
+    },
+    {
+        "key": "shift+cmd+-",
+        "command": "editor.action.fontZoomOut"
+    },
+    {
+        "key": "shift+cmd+=",
+        "command": "editor.action.fontZoomIn"
+    },
+    {
+        "key": "cmd+shift+0",
+        "command": "editor.action.fontZoomReset"
+    },
+
+    {
+        "key": "ctrl+shift+p",
+        "command": "workbench.action.showCommands",
+    },
+    {
+        "key": "ctrl+z",
+        "command": "undo"
+    },
+    {
+        "key": "ctrl+shift+z",
+        "command": "redo"
+    },
+    {
+        "key": "ctrl+s",
+        "command": "workbench.action.files.save"
+    },
+    {
+        "key": "shift+cmd+-",
+        "command": "-workbench.action.zoomOut"
+    },
+    {
+        "key": "shift+cmd+=",
+        "command": "-workbench.action.zoomIn"
+    },
+    
+    
+
+  // -------[ Insert Mode  ]-----------------------------------------------  
+
+    {
+        "key": "f15",
+        "command": "jump-and-select.reset_just_jumped",
+        "when": "jump-and-select.just_jumped"
+    },
+    {
+        "key": "f15",
+        "command": "rahulvscodeplugin.insert",
+        "when": "!jump-and-select.just_jumped"
+    },
+    {
+        "key": "cmd+f15",
+        "command": "jump-and-select.reset_just_jumped",
+        "when": "jump-and-select.just_jumped"
+    },
+    {
+        "key": "cmd+f15",
+        "command": "rahulvscodeplugin.insert",
+        "when": "!jump-and-select.just_jumped"
+    },
+  // -------[ Insert Mode END ]-----------------------------------------------  
+
+
+    {
+        "key": "ctrl+=",
+        "command": "workbench.action.zoomIn"
+    },
+    {
+        "key": "ctrl+-",
+        "command": "workbench.action.zoomOut"
+    },
+ 
+  // -------[ ctrl+alt === HOLD SPACE  ]-----------------------------------------------  
+    {
+        "key": "f19",
+        "command": "rahulvscodeplugin.space_fn",
+    },
+    {
+        "key": "ctrl+F19",
+        "command": "rahulvscodeplugin.space_fn_off",
+    },
+    {
+        "key": "0",
+        "command": "moveActiveEditor",
+        "args": {
+            "to": "left",
+            "by": "tab",
+            "value": 25
+        },
+        "when": "space_fn"
+    },
+    {
+        "key": ".",
+        "command": "editor.action.quickFix",
+        "when": "space_fn && editorHasCodeActionsProvider && textInputFocus && !editorReadonly"
+    },
+    {
+        "key": "1",
+        "command": "workbench.action.openEditorAtIndex1",
+        "when": "space_fn"
+    },
+    {
+        "key": "2",
+        "command": "workbench.action.openEditorAtIndex2",
+        "when": "space_fn"
+    },
+    {
+        "key": "3",
+        "command": "workbench.action.openEditorAtIndex3",
+        "when": "space_fn"
+    },
+    {
+        "key": "4",
+        "command": "workbench.action.openEditorAtIndex4",
+        "when": "space_fn"
+    },
+    {
+        "key": ",",
+        "command": "editor.toggleFold",
+        "when": "space_fn"
+    },
+    {
+        "key": "f",
+        "command": "workbench.action.quickOpenPreviousRecentlyUsedEditorInGroup",
+        "when": "space_fn && !activeEditorGroupEmpty"
+    },
+    {
+        "key": "f",
+        "command": "workbench.action.quickOpenNavigateNextInEditorPicker",
+        "when": "space_fn && inEditorsPicker && inQuickOpen"
+    },
+    {
+        "key": "'",
+        "command": "bracketeer.removeQuotes",
+        "when": "space_fn"
+    },
+    {
+        "key": "[",
+        "command": "bracketeer.removeBrackets",
+        "when": "space_fn"
+    },
+    {
+        "key": "left",
+        "command": "workbench.action.previousEditor",
+        "when": "space_fn && !renameInputVisible && !terminalFocus"
+    },
+    {
+        "key": "right",
+        "command": "workbench.action.nextEditor",
+        "when": "space_fn && !renameInputVisible && !terminalFocus"
+    },
+    {
+        "key": "down",
+        "command": "editor.action.insertCursorBelow",
+        "when": "space_fn && editorTextFocus && modal.normal && !suggestWidgetVisible && !parameterHintsVisible",
+    },
+    {
+        "key": "up",
+        "command": "editor.action.insertCursorAbove",
+        "when": "space_fn && editorTextFocus && modal.normal && !suggestWidgetVisible && !parameterHintsVisible"
+    },
+    {
+        "key": "shift+up", // whatever keybinding you want
+        "command": "cursorMove",
+        "args": {
+            "to": "prevBlankLine",
+            "select": true
+        },
+        "when": "space_fn && editorTextFocus"
+    },
+    {
+        "key": "shift+down",
+        "command": "cursorMove",
+        "args": {
+            "to": "nextBlankLine",
+            "select": true
+        },
+        "when": "space_fn && editorTextFocus"
+    },
+    {
+        "key": "5",
+        "command": "cancelSelection",
+        "when": "space_fn && editorHasSelection && textInputFocus"
+    },
+    // {
+        // "key": "n",
+        // "command": "editor.action.nextMatchFindAction",
+        // "when": "space_fn && editorTextFocus"
+    // },
+    {
+        "key": "n",
+        "command": "workbench.action.files.newUntitledFile",
+        "when": "space_fn && editorTextFocus"
+    },
+    {
+        "key": "w",
+        "command": "workbench.action.closeActiveEditor",
+        "when": "space_fn"
+    },
+    {
+        "key": "r",
+        "command": "git.revertSelectedRanges",
+        "when": "space_fn"
+    },
+    {
+        "key": "a r",
+        "command": "editor.action.dirtydiff.next",
+        "when": "editorTextFocus && modal.normal && !terminalFocus  && !renameInputVisible"
+    },
+    {
+        "key": "g",
+        "command": "workbench.scm.focus",
+        "when": "space_fn"
+    },
+    {
+        "key": "e",
+        "command": "workbench.explorer.fileView.focus",
+        "when": "space_fn"
+    },
+    {
+        "key": "s",
+        "command": "workbench.action.quickTextSearch",
+        "when": "space_fn"
+    },
+    {
+        "key": "a",
+        "command": "workbench.action.focusActiveEditorGroup",
+        "when": "space_fn"
+    },
+    {
+        "key": "c",
+        "command": "rahulvscodeplugin.copy",
+        "when": "space_fn"
+    },
+    {
+        "key": "d",
+        "command": "workbench.debug.action.toggleRepl",
+        "when": "space_fn"
+    },
+    {
+        "key": "d",
+        "command": "workbench.debug.action.focusWatchView",
+        "when": "space_fn && !view.workbench.debug.watchExpressionsView.visible"
+    },
+    {
+        "key": "d",
+        "command": "workbench.action.closePanel",
+        "when": "space_fn && view.workbench.debug.watchExpressionsView.visible"
+    },
+    {
+        "key": "t",
+        "command": "workbench.action.terminal.toggleTerminal",
+        "when": "space_fn"
+    },
+    {
+        "key": "cmd+right",
+        "command": "workbench.action.quickOpen",
+        "when": "space_fn"
+    },
+    {
+        "key": "p",
+        "command": "editor.action.triggerParameterHints",
+        "when": "space_fn && editorHasSignatureHelpProvider && editorTextFocus && !renameInputVisible"
+    },
+    {
+        "key": "9",
+        "command": "workbench.action.showCommands",
+        "when": "space_fn"
+    },
+    {
+        "key": "enter",
+        "command": "editor.action.insertSnippet",
+        "args": {
+            "snippet": "\n{\n\t${0:}\n}"
+        },
+        "when": "space_fn && editorTextFocus"
+    },
+    {
+        "key": "z",
+        "command": "redo",
+        "when": "space_fn && editorTextFocus && !editorReadonly && modal.normal && !terminalFocus && !renameInputVisible"
+    },
+    {
+        "key": "/",
+        "command": "rahulvscodeplugin.commentAandMoveDown",
+        "when": "space_fn && !editorHasSelection"
+    },
+    {
+        "key": "/",
+        "command": "editor.action.blockComment",
+        "when": "space_fn && editorHasSelection"
+    },
+
+
+    /* {
+        "key": "ctrl+alt+,",
+        "command": "editor.toggleFold",
+
+        // "command": "extension.multiCommand.execute",
+        // "args": { 
+        //     "sequence": [
+        //         "extension.selectCurlyBrackets",
+        //         "editor.createFoldingRangeFromSelection",
+        //         // "cursorDown"
+        //     ]
+        // }
+    },
+    {
+        "key": "ctrl+alt+f",
+        "command": "workbench.action.quickOpenPreviousRecentlyUsedEditorInGroup",
+        "when": "editorTextFocus && !activeEditorGroupEmpty"
+    },
+    {
+        "key": "ctrl+alt+f",
+        "command": "workbench.action.quickOpenNavigateNextInEditorPicker",
+        "when": "inEditorsPicker && inQuickOpen"
+    },
+    {
+        "key": "ctrl+alt+space",
+        // "command": "workbench.action.quickOpenPreviousRecentlyUsedEditorInGroup",
+        "command": "workbench.action.quickOpenLeastRecentlyUsedEditor",
+        // "when": "editorTextFocus && !activeEditorGroupEmpty"
+    },
+    {
+        "key": "ctrl+alt+k",
+        "command": "workbench.action.quickOpenNavigateNextInEditorPicker",
+        "when": "inQuickOpen"
+    },
+    {
+        "key": "ctrl+alt+i",
+        "command": "workbench.action.quickOpenNavigatePreviousInEditorPicker",
+        "when": "inQuickOpen"
+    },
+    {
+        "key": "ctrl+alt+'",
+        "command": "bracketeer.removeQuotes",
+        "when": ""
+    },
+    {
+        "key": "ctrl+alt+[",
+        "command": "bracketeer.removeBrackets",
+        "when": ""
+    },
+    {
+        "key": "ctrl+alt+i",
+        "command": "cursorUp",
+        "when": "editorTextFocus"
+    },
+    {
+        "key": "ctrl+alt+k",
+        "command": "cursorDown",
+        "when": "editorTextFocus"
+    },
+    {
+        "key": "ctrl+alt+j",
+        "command": "cursorLeft",
+        "when": "editorTextFocus"
+    },
+    {
+        "key": "ctrl+alt+l",
+        "command": "cursorRight",
+        "when": "editorTextFocus"
+    },
+    {
+        "key": "ctrl+alt+j",
+        "command": "workbench. action.previousEditor"
+    },
+    {
+        "key": "ctrl+alt+l",
+        "command": "workbench.action.nextEditor",
+    },
+    {
+        "key": "ctrl+alt+i",
+        "command": "selectPrevSuggestion",
+        "when": "suggestWidgetMultipleSuggestions && suggestWidgetVisible && textInputFocus"
+    },
+    {
+        "key": "ctrl+alt+k",
+        "command": "selectNextSuggestion",
+        "when": "suggestWidgetMultipleSuggestions && suggestWidgetVisible && textInputFocus"
+    },
+    {
+        "key": "ctrl+alt+shift+up", // whatever keybinding you want
+        "command": "cursorMove",
+        "args": {
+            "to": "prevBlankLine",
+            "select": true
+        },
+        "when": "editorTextFocus"
+    },
+    {
+        "key": "ctrl+alt+shift+down",
+        "command": "cursorMove",
+        "args": {
+            "to": "nextBlankLine",
+            "select": true
+        },
+        "when": "editorTextFocus"
+    },
+    // {
+    //     "key": "ctrl+c ctrl+alt+5",
+    //     "command": "workbench.action.moveEditorToNextGroup",
+    // },
+    // {
+    //     "key": "ctrl+alt+shift+0",
+    //     "command": "modaledit.enterInsert",
+    //     // "when": "modaledit.normal"
+    // },
+    // {
+    //     "key": "ctrl+alt+shift+9",
+    //     "command": "modaledit.enterNormal",
+    //     // "when": "modaledit.normal"
+
+    // },
+    {
+        "key": "ctrl+alt+5",
+        "command": "cancelSelection",
+        "when": "editorHasSelection && textInputFocus"
+    },
+    {
+        "key": "ctrl+alt+p",
+        "command": "inlayHints.startReadingLineWithHint"
+        // "command": "clangd.inlayHints.toggle",
+    },
+    // {
+        // "key": "ctrl+alt+p",
+        // "command": "workbench.action.quickOpen"
+    // },
+    {
+        "key": "ctrl+alt+l",
+        "command": "-editor.action.formatSelection",
+    },
+    {
+        "key": "ctrl+alt+right",
+        "command": "-workbench.action.moveEditorToNextGroup"
+    },
+    // {
+    //     "key": "ctrl+c ctrl+alt+5",
+    //     "command": "workbench.action.moveEditorToPreviousGroup",
+    //     "when": "activeEditorGroupLast"
+    // },
+    {
+        "key": "ctrl+alt+left",
+        "command": "-workbench.action.moveEditorToPreviousGroup",
+    },
+    {
+        "key": "ctrl+alt+n",
+        "command": "editor.action.nextMatchFindAction",
+        "when": "editorTextFocus"
+    },
+    {
+        "key": "ctrl+alt+k",
+        "command": "-bookmarks.toggle",
+        "when": "editorTextFocus"
+    },
+    {
+        "key": "ctrl+alt+l",
+        "command": "-bookmarks.jumpToNext",
+        "when": "editorTextFocus"
+    },
+    {
+        "key": "ctrl+alt+j",
+        "command": "-bookmarks.jumpToPrevious",
+        "when": "editorTextFocus"
+    },
+    // {
+    //     "key": "ctrl+alt+j",
+    //     "command": "workbench.action.focusLeftGroup"
+    // },
+    // {
+    //     "key": "ctrl+alt+l",
+    //     "command": "workbench.action.focusRightGroup"
+    // },
+    // {
+    //     "key": "ctrl+alt+i",
+    //     "command": "workbench.action.focusAboveGroup"
+    // },
+    // {
+    //     "key": "ctrl+alt+k",
+    //     "command": "workbench.action.focusBelowGroup"
+    // },
+    // {
+    //     "key": "ctrl+alt+o",
+    //     "command": "-workbench.action.remote.showMenu"
+    // },
+    {
+        "key": "ctrl+alt+c",
+        "command": "workbench.action.closeActiveEditor",
+        // "when": "modal.normal && !inQuickOpen && !findInputFocussed && !sideBarFocus"
+        // findInputFocussed searchViewletVisible replaceActive inSearchEditor workbench.view.search
+    },
+    {
+        "key": "ctrl+alt+r",
+        "command": "git.revertSelectedRanges"
+    },
+    {
+        "key": "ctrl+alt+k",
+        "command": "editor.action.insertCursorBelow",
+        "when": "editorTextFocus && modal.normal"
+    },
+    { 
+        "key": "ctrl+alt+i",
+        "command": "editor.action.insertCursorAbove",
+        "when": "editorTextFocus && modal.normal"
+    },
+    {
+        "key": "ctrl+alt+g",
+        "command": "workbench.scm.focus"
+    },
+    {
+        "key": "ctrl+alt+e",
+        "command": "workbench.explorer.fileView.focus"
+    },
+     
+    // {
+    //     "key": "ctrl+alt+s",
+    //     "command": "workbench.view.search.focus"
+    // },
+    
+    // {
+    //     "key": "ctrl+alt+s",
+    //     "command": "extension.multiCommand.execute",
+    //     "args": { 
+    //         "sequence": [
+    //             "rahulvscodeplugin.insert",
+    //             "workbench.view.search.focus",
+    //         ]
+    //     },
+    // },
+
+    {
+        "key": "ctrl+alt+s",
+        "command": "workbench.action.quickTextSearch"
+    },
+    {
+        "key": "ctrl+alt+a",
+        "command": "workbench.action.focusActiveEditorGroup"
+    },
+    
+    {
+        "key": "ctrl+alt+d",
+        "command": "workbench.debug.action.toggleRepl"
+    },
+    {
+        "key": "ctrl+alt+w",
+        "command": "workbench.debug.action.focusWatchView",
+        "when": "!view.workbench.debug.watchExpressionsView.visible"
+    },
+    {
+        "key": "ctrl+alt+w",
+        "command": "workbench.action.closePanel",
+        "when": "view.workbench.debug.watchExpressionsView.visible"
+    },
+    {
+        "key": "ctrl+alt+t",
+        "command": "workbench.action.terminal.toggleTerminal"
+    }, 
+    */
+  // -------[ ctrl+alt === HOLD SPACE  END ]-----------------------------------------------  
+
+
+{
+    "key": "ctrl+f",
+    "command": "actions.find",
+    "when": "editorFocus || editorIsOpen"
+},
+
+
+// {
+//     "key": "f7",
+//     "command": "workbench.action.tasks.runTask",
+//     "args": "RunGame",
+//     "when": "config.hotreload_game_code_f4"
+// },
+
+{
+    "key": "f7",
+    "command": "extension.multiCommand.execute",
+        "args": {
+
+            "sequence": [
+                {
+                    "command": "workbench.action.tasks.runTask",
+                    "args": "RunGame",
+                },
+                                
+                "workbench.action.terminal.killAll",
+            ]
+        },
+    "when": "config.hotreload_game_code_f4"
+},
+
+
+
+{
+    "key": "c", // Or any shortcut you prefer
+    "command": "runCommands",
+    "args": {
+        "commands": [
+            "workbench.action.terminal.selectAll",
+            "editor.action.clipboardCopyAction",
+            "workbench.action.files.newUntitledFile",
+            "editor.action.clipboardPasteAction"
+        ]
+    },
+    "when": "space_fn && terminalFocus"
+},
+
+//-----------[ dired ]----------------------------------------------------------------
+{
+  "key": "a f",
+  "command": "extension.diredGotoAnywhere",
+  "when": "!modal.visual && editorTextFocus && modal.normal && !terminalFocus"
+},
+{
+    "key": "i",
+    "command": "cursorUp",
+    "when": "!modal.visual &&editorTextFocus && !dired.renameMode && editorLangId == 'dired'"
+},
+{
+    "key": "k",
+    "command": "cursorDown",
+    "when": "!modal.visual &&editorTextFocus && !dired.renameMode && editorLangId == 'dired'"
+},
+{
+  "key": "enter",
+  "command": "extension.diredRenameCommit",
+  "when": "dired.renameMode && editorTextFocus && editorLangId == 'dired'"
+},
+{
+  "key": "escape",
+  "command": "extension.diredRenameCancel",
+  "when": "dired.renameMode && editorTextFocus && editorLangId == 'dired'"
+},
+{
+  "key": "escape",
+  "command": "workbench.action.closeActiveEditor",
+  "when": "!dired.renameMode && editorTextFocus && editorLangId == 'dired'"
+},
+{
+  "key": "r",
+  "command": "extension.diredRename",
+  "when": "!modal.visual && editorTextFocus && !dired.renameMode && editorLangId == 'dired'"
+},
+{
+    "key": "f",
+    "command": "extension.diredJumpToName",
+    "when": "!modal.visual && editorTextFocus && !dired.renameMode && editorLangId == 'dired'"
+},
+
+
+{
+    "key": "c f",
+    "command": "extension.diredCreateFile",
+    "when": "!modal.visual && editorTextFocus && !dired.renameMode && editorLangId == 'dired'"
+},
+
+{
+    "key": "v r",
+    "command": "extension.diredRefresh",
+    "when": "!modal.visual && editorTextFocus && !dired.renameMode && editorLangId == 'dired'"
+},
+{
+    "key": "u",
+    "command": "extension.diredUp",
+    "when": "!modal.visual && editorTextFocus && !dired.renameMode && editorLangId == 'dired'"
+},
+{
+  "key": "g",
+  "command": "-extension.diredGoto",
+  "when": "editorTextFocus && !dired.renameMode && editorLangId == 'dired'"
+},
+{
+    "key": "j",
+    "command": "-extension.diredJumpToName",
+    "when": "editorTextFocus && !dired.renameMode && editorLangId == 'dired'"
+},
+//-----------[ dired ]----------------------------------------------------------------
+
+
+]
